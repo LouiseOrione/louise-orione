@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Modifie ce titre ── -->
+  <title>Math is Music — Louise Orione</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/project-page.css" />
+</head>
+
+<body class="project-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Header — identique sur toutes les pages -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="proj-main">
+    <!-- ══════════════════════════════════════════════════════════════
+         1. BANDEAU — image pleine largeur, bord à bord
+         Première chose visible en arrivant sur la page.
+         Remplace src par ton image principale.
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="proj-bandeau">
+      <img
+        src="imports/MATH/math02.jpg"
+        alt="Image principale du projet"
+        class="proj-bandeau-img"
+        loading="eager"
+      >
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         2. INTRO — nom du projet + description courte
+         Centré sous le bandeau, avec des marges confortables.
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-intro">
+      <!-- Métadonnées : année · type · rôle — modifie ces valeurs -->
+      <div class="proj-meta">
+        <span class="proj-meta-item">2024</span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Médiation et vulgarisation scientifique / Documentaire"
+          data-en="Science Communication and Outreach / Documentary">
+          Médiation et vulgarisation scientifique / Documentaire
+        </span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Direction artistique, Motion Design"
+          data-en="Art direction, Montion Design">
+          Direction artistique, Motion Design
+        </span>
+      </div>
+
+      <!-- Titre — modifie data-fr, data-en et le texte -->
+      <h1 class="proj-title" data-fr="Math is Music - Dorothy Vaughan" data-en="Math is Music - Dorothy Vaughan">
+        Math is Music - Dorothy Vaughan
+      </h1>
+
+      <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+           <br>I am a Woman,
+           <br>I am Black,
+           <br>I am a Teacher,
+           <br>I am a Mathematician,
+           <br>I am a Developper,
+           <br>I am a Computer,
+           <br>I am a Mother,
+           <br>I am Dorothy Vaughan.
+           <br>
+           <br>En Octobre 2024, l’Institut Galilée du site de Villetaneuse de l’Université Sorbonne Paris Nord a renommé quatre de ses amphithéâtres en hommage à de grandes figures féminines de la science, dont Dorothy Vaughan.
+           <br>Afin de faire connaître son parcours et son histoire, nous avons été invités à concevoir une série d’affiches ainsi qu’un court métrage retraçant la vie et les réalisations de cette pionnière de l’ombre.
+           <br>(Vernissage le 11 Septembre 2025).
+           <br>
+           <br>Nos œuvres sont aujourd’hui exposées dans les amphithéâtres, transformant ces lieux de savoir en espaces de mémoire et d’inspiration.
+           <br>
+           <br>Nous remercions Monsieur Cary, petit fils de Dorothy Vaughan, pour le partage précieux de sa mémoire.
+           <br>
+           <br>Crédits
+           <br>3D : Kévin Forest
+           <br>Animation 2D : Ninon Chauveau, Aurélien Guillot, Louise Orione
+           <br>Montage & son : Louise Orione
+           <br>Affiches : Angèle Dumesny, Ornella Antony
+           <br>Rédaction voice off: Louise Orione
+           <br>Voice over: Marine Legentil
+           <br>
+           <br>Travail de collaboration entre le DSAA Design et Création d’environnement Numérique, et le DSAA Illustration Scientifique et Médiatiation de l’Ecole Estienne, Paris 75013.
+           <br>@dsaa.dcn, @illustrationscientifique
+        </p>
+        <p data-lang-block="en" style="display:none">
+           <br>I am a Woman,
+           <br>I am Black,
+           <br>I am a Teacher,
+           <br>I am a Mathematician,
+           <br>I am a Developper,
+           <br>I am a Computer,
+           <br>I am a Mother,
+           <br>I am Dorothy Vaughan.
+           <br>
+           <br>In 2024, the Institut Galilée at the Villetaneuse campus of Université Sorbonne Paris Nord renamed four of its lecture halls in tribute to great women figures in science, including Dorothy Vaughan.
+           <br>To help share her journey and story, we were invited to design a series of posters as well as a short film retracing the life and achievements of this hidden pioneer.
+           <br>(Opening night: September 11, 2025).
+           <br>
+           <br>Our works are now displayed in the lecture halls, transforming these places of learning into spaces of memory and inspiration.
+           <br>
+           <br>We thank Mr. Cary, Dorothy Vaughan's grandson, for generously sharing his memories.
+           <br>
+           <br>Crédits
+           <br>3D: Kévin Forest
+           <br>2D Animation: Ninon Chauveau, Aurélien Guillot, Louise Orione
+           <br>Editing & Sound: Louise Orione
+           <br>Posters: Angèle Dumesny, Ornella Antony
+           <br>Voice-over script: Louise Orione
+           <br>Voice-over: Marine Legentil
+           <br>
+           <br>A collaborative project between the DSAA Design et Création d'environnement Numérique and the DSAA Illustration Scientifique et Médiation programs at École Estienne, Paris 75013.
+           <br>@dsaa.dcn, @illustrationscientifique
+        </p>
+      </div>
+
+      <!-- Liens externes avec vignettes YouTube -->
+      <div class="proj-video-links">
+
+      <a href="https://galilee.univ-paris13.fr/femmes-de-sciences/amphi-dorothy-vaughn/" target="_blank" rel="noopener" class="proj-video-link">
+        <div class="proj-ext-thumb-wrap">
+          <img
+            src="imports/MATH/math03.jpg"
+            alt="Court-métrage documentaire"
+            class="proj-ext-thumb-img"
+            loading="lazy"
+          >
+        </div>
+        <div class="proj-video-play" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="10" fill="rgba(0,0,0,0.55)"/>
+            <path d="M8 6.5L14 10L8 13.5V6.5Z" fill="white"/>
+          </svg>
+        </div>
+        <span class="proj-video-link-label">
+          <span data-fr="Court-métrage documentaire" data-en="Documentary short film">Court-métrage documentaire</span>
+          <svg width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <figcaption class="proj-caption"
+          data-fr="©Montage vidéo par Louise Orione"
+          data-en="©Video edited by Louise Orione">
+          ©Montage vidéo par Louise Orione
+        </figcaption>
+      </a>
+
+      <a href="https://www.calameo.com/books/00585310603c5abbc0e49" target="_blank" rel="noopener" class="proj-video-link">
+        <div class="proj-ext-thumb-wrap">
+          <img
+            src="imports/MATH/math04.jpg"
+            alt="Découvrir les affiches"
+            class="proj-ext-thumb-img"
+            loading="lazy"
+          >
+        </div>
+        <div class="proj-video-play" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="10" fill="rgba(0,0,0,0.55)"/>
+            <path d="M8 6.5L14 10L8 13.5V6.5Z" fill="white"/>
+          </svg>
+        </div>
+        <span class="proj-video-link-label">
+          <span data-fr="Découvrir les affiches" data-en="Discover the posters">Découvrir les affiches</span>
+          <svg width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <figcaption class="proj-caption"
+          data-fr="©Affiches réalisées par Ornella Anthony et Angèle Dumesny"
+          data-en="©Posters by Ornella Anthony and Angèle Dumesny">
+          ©Affiches réalisées par Ornella Anthony et Angèle Dumesny
+        </figcaption>
+      </a>
+    </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         3. GALERIE — médias du projet
+         Toutes les images/vidéos ont de petites marges latérales.
+         Elles peuvent être seules, par 2 ou par 3 sur la même ligne.
+
+         BLOCS DISPONIBLES — copie/colle selon tes besoins :
+
+           .proj-row                → une image seule (pleine largeur de la colonne)
+           .proj-row.proj-row--duo  → deux médias côte à côte
+           .proj-row.proj-row--trio → trois médias sur la même ligne
+
+         Pour chaque média : remplace src/alt ou utilise un <div class="proj-video-wrap">
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-gallery">
+
+      <!-- ── Trois vidéos autoplay côte à côte ── -->
+      <!-- Remplace les src par tes vrais fichiers dans imports/MATH/ -->
+      <div class="proj-row proj-row--trio">
+
+        <figure class="proj-item">
+          <video
+            src="imports/MATH/math_video01.mp4"
+            class="proj-img proj-autoplay-video"
+            autoplay muted loop playsinline
+            style="object-fit:cover;"
+          ></video>
+          <figcaption class="proj-caption"
+            data-fr="Animation 2D (After Effects & P5.js) — Louise Orione"
+            data-en="2D Animation (After Effects & P5.js) — Louise Orione">
+            Animation 2D (After Effects & P5.js) — Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <video
+            src="imports/MATH/math_video02.mp4"
+            class="proj-img proj-autoplay-video"
+            autoplay muted loop playsinline
+            style="object-fit:cover;"
+          ></video>
+          <figcaption class="proj-caption"
+            data-fr="Animation 2D (After Effects & P5.js) — Louise Orione"
+            data-en="2D Animation (After Effects & P5.js) — Louise Orione">
+            Animation 2D (After Effects & P5.js) — Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <video
+            src="imports/MATH/math_video03.mp4"
+            class="proj-img proj-autoplay-video"
+            autoplay muted loop playsinline
+            style="object-fit:cover;"
+          ></video>
+          <figcaption class="proj-caption"
+            data-fr="Animation 3D (Blender) — Kévin Forest; Animation 2D (After Effects & P5.js) — Louise Orione"
+            data-en="3D Animation (Blender) — Kévin Forest; 2D Animation (After Effects & P5.js) — Louise Orione">
+            Animation 3D (Blender) — Kévin Forest; Animation 2D (After Effects & P5.js) — Louise Orione
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <!-- ── Carousel — une image à la fois, navigue avec les flèches ── -->
+      <!-- Remplace les src par tes vraies images dans l'ordre voulu    -->
+      <div class="proj-row">
+        <figure class="proj-item">
+
+          <div class="proj-carousel" id="wedocCarousel">
+
+            <button class="proj-carousel-btn proj-carousel-prev" aria-label="Image précédente" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-stage">
+              <!-- Image 1 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math06.jpg" alt="DOROTHY VAUGHAN — image 1" class="proj-carousel-img is-active" loading="lazy">
+              <!-- Image 2 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math05.jpg" alt="DOROTHY VAUGHAN — image 2" class="proj-carousel-img" loading="lazy">
+              <!-- Image 3 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math07.jpg" alt="DOROTHY VAUGHAN — image 3" class="proj-carousel-img" loading="lazy">
+              <!-- Image 4 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math08.jpg" alt="DOROTHY VAUGHAN — image 4" class="proj-carousel-img" loading="lazy">
+              <!-- Image 5 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math09.jpg" alt="DOROTHY VAUGHAN — image 5" class="proj-carousel-img" loading="lazy">
+              <!-- Image 7 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math10.jpg" alt="DOROTHY VAUGHAN — image 7" class="proj-carousel-img" loading="lazy">
+              <!-- Image 8 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math11.jpg" alt="DOROTHY VAUGHAN — image 8" class="proj-carousel-img" loading="lazy">
+              <!-- Image 9 — remplace src par ta vraie image -->
+              <img src="imports/MATH/math12.jpg" alt="DOROTHY VAUGHAN — image 9" class="proj-carousel-img" loading="lazy">             
+            </div>
+
+            <button class="proj-carousel-btn proj-carousel-next" aria-label="Image suivante" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M5 2L10 7L5 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-count">
+              <span class="proj-carousel-current">1</span>
+              <span class="proj-carousel-sep">/</span>
+              <span class="proj-carousel-total"></span>
+            </div>
+
+          </div>
+
+        </figure>
+      </div>
+    </section>
+
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         4. NAVIGATION — projet précédent / timeline / projet suivant
+         Modifie les href, noms et années.
+    ══════════════════════════════════════════════════════════════════ -->
+    <nav class="proj-nav" aria-label="Navigation entre projets">
+
+      <!-- Projet précédent — modifie href, nom, année -->
+      <a href="echo.html" class="proj-nav-link proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="← Précédent" data-en="← Previous">← Précédent</span>
+        <span class="proj-nav-name">Echo</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+      <!-- Retour à la timeline -->
+      <a href="index.html" class="proj-nav-home" aria-label="Retour à la timeline">
+        <svg class="proj-nav-sun" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+          <line x1="12" y1="2"  x2="12" y2="5"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="2"  y1="12" x2="5"  y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <!-- Projet suivant — modifie href, nom, année -->
+      <a href="affiches.html" class="proj-nav-link proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant →" data-en="Next →">Suivant →</span>
+        <span class="proj-nav-name">Affiches</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+    </nav>
+
+
+  </main>
+
+
+  <!-- Contacts en bas à gauche — identique sur toutes les pages -->
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/ui.js"></script>
+  <script>
+    setActiveNav('');
+  </script>
+
+  <script>
+    (function() {
+      function initCarousels() {
+        document.querySelectorAll('.proj-carousel').forEach(function(carousel) {
+          var imgs    = Array.from(carousel.querySelectorAll('.proj-carousel-img'));
+          var prev    = carousel.querySelector('.proj-carousel-prev');
+          var next    = carousel.querySelector('.proj-carousel-next');
+          var counter = carousel.querySelector('.proj-carousel-current');
+          var totalEl = carousel.querySelector('.proj-carousel-total');
+
+          if (!imgs.length) return;
+
+          imgs.forEach(function(img, i) {
+            img.style.display  = i === 0 ? 'block' : 'none';
+            img.style.width    = '100%';
+            img.style.height   = 'clamp(320px, 55vw, 720px)';
+            img.style.objectFit = 'cover';
+          });
+
+          var idx = 0;
+          if (totalEl) totalEl.textContent = imgs.length;
+          if (counter) counter.textContent = '1';
+
+          function show(n) {
+            imgs[idx].style.display = 'none';
+            idx = ((n % imgs.length) + imgs.length) % imgs.length;
+            imgs[idx].style.display = 'block';
+            if (counter) counter.textContent = String(idx + 1);
+          }
+
+          if (prev) prev.onclick = function() { show(idx - 1); };
+          if (next) next.onclick = function() { show(idx + 1); };
+
+          var tx = 0;
+          carousel.addEventListener('touchstart', function(e) {
+            tx = e.touches[0].clientX;
+          }, { passive: true });
+          carousel.addEventListener('touchend', function(e) {
+            var dx = e.changedTouches[0].clientX - tx;
+            if (dx > 40)  show(idx - 1);
+            if (dx < -40) show(idx + 1);
+          }, { passive: true });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousels);
+      } else {
+        initCarousels();
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — Louise Orione</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    /* ── Styles spécifiques à cette page ── */
+    body.privacy-page {
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      height: auto !important;
+    }
+
+    .privacy-main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: calc(var(--header-h) + 60px) clamp(24px, 5vw, 60px) 120px;
+    }
+
+    .privacy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      margin-bottom: 48px;
+      transition: color var(--transition-fast);
+    }
+
+    .privacy-back:hover { color: var(--color-text); }
+
+    .privacy-title {
+      font-family: var(--font-mono);
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 300;
+      color: var(--color-text);
+      margin-bottom: 8px;
+      line-height: 1.2;
+      transition: color var(--transition-med);
+    }
+
+    .privacy-date {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 300;
+      color: var(--color-text-muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 48px;
+      transition: color var(--transition-med);
+    }
+
+    .privacy-section {
+      margin-bottom: 40px;
+    }
+
+    .privacy-section h2 {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-ruler-line);
+      transition: color var(--transition-med), border-color var(--transition-med);
+    }
+
+    .privacy-section p,
+    .privacy-section li {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--color-text);
+      transition: color var(--transition-med);
+    }
+
+    .privacy-section p + p {
+      margin-top: 12px;
+    }
+
+    .privacy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .privacy-section ul li::before {
+      content: '— ';
+      color: var(--color-text-muted);
+    }
+
+    .privacy-section a {
+      color: var(--color-playhead);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-playhead);
+      padding-bottom: 1px;
+      transition: opacity var(--transition-fast);
+    }
+
+    .privacy-section a:hover { opacity: 0.7; }
+  </style>
+</head>
+
+<body class="privacy-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="privacy-main">
+
+    <!-- Lien retour -->
+    <a href="index.html" class="privacy-back">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+        <path d="M8 1L3 6L8 11" stroke="currentColor" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      accueil
+    </a>
+
+    <h1 class="privacy-title">Politique de confidentialité</h1>
+    <p class="privacy-date">Dernière mise à jour : juillet 2026</p>
+
+
+    <!-- 1. Responsable -->
+    <section class="privacy-section">
+      <h2>1. Responsable du traitement</h2>
+      <p>
+        Louise Orione<br>
+        Paris, France<br>
+        Contact : <a href="mailto:louiseorione.pro@gmail.com">louiseorione.pro@gmail.com</a>
+      </p>
+    </section>
+
+
+    <!-- 2. Nature du site -->
+    <section class="privacy-section">
+      <h2>2. Nature du site</h2>
+      <p>
+        Ce site est un portfolio personnel statique (HTML/CSS/JavaScript), hébergé via
+        <strong>GitHub Pages</strong> (GitHub, Inc., 88 Colin P. Kelly Jr. Street,
+        San Francisco, CA 94107, États-Unis). Il ne contient aucun formulaire
+        d'inscription, aucun espace membre, aucun système de commentaires
+        et aucun outil d'analyse d'audience (Google Analytics ou équivalent).
+      </p>
+    </section>
+
+
+    <!-- 3. Données collectées -->
+    <section class="privacy-section">
+      <h2>3. Données collectées</h2>
+
+      <p><strong>Données que je ne collecte pas :</strong></p>
+      <ul>
+        <li>Nom, prénom, adresse postale</li>
+        <li>Cookies de suivi ou de ciblage publicitaire</li>
+        <li>Données de navigation ou statistiques d'audience</li>
+      </ul>
+
+      <p><strong>Données collectées par GitHub Pages :</strong></p>
+      <p>
+        GitHub Pages peut enregistrer automatiquement les adresses IP des visiteurs
+        dans ses journaux techniques (logs), à des fins de sécurité et de conformité
+        légale. Je n'ai pas accès à ces données et ne les traite pas.
+        Pour en savoir plus, consultez la
+        <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement"
+          target="_blank" rel="noopener">politique de confidentialité de GitHub</a>.
+      </p>
+
+      <p><strong>Contact par e-mail :</strong></p>
+      <p>
+        Si vous me contactez via l'adresse e-mail affichée sur ce site,
+        les informations que vous transmettez (nom, adresse e-mail, message)
+        sont utilisées uniquement pour répondre à votre demande.
+        Elles ne sont pas transmises à des tiers et ne sont pas conservées
+        au-delà du temps nécessaire à l'échange.
+      </p>
+    </section>
+
+
+    <!-- 4. Vidéos embarquées -->
+    <section class="privacy-section">
+      <h2>4. Contenus embarqués</h2>
+      <p>
+        Certaines pages intègrent des vidéos hébergées sur
+        <strong>YouTube</strong> (Google LLC) et <strong>Google Drive</strong>.
+        Lors de la lecture de ces vidéos, Google peut collecter des données
+        vous concernant, notamment votre adresse IP. Ces traitements sont
+        régis par la
+        <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener">
+          politique de confidentialité de Google</a>.
+      </p>
+      <p>
+        Les vidéos YouTube sont intégrées via le domaine
+        <code>youtube-nocookie.com</code>, qui limite les cookies déposés
+        par YouTube sur votre navigateur.
+      </p>
+    </section>
+
+
+    <!-- 5. Droits -->
+    <section class="privacy-section">
+      <h2>5. Vos droits</h2>
+      <p>
+        Conformément au Règlement Général sur la Protection des Données (RGPD —
+        Règlement UE 2016/679), vous disposez des droits suivants concernant
+        vos données personnelles :
+      </p>
+      <ul>
+        <li>Droit d'accès</li>
+        <li>Droit de rectification</li>
+        <li>Droit à l'effacement (« droit à l'oubli »)</li>
+        <li>Droit d'opposition au traitement</li>
+      </ul>
+      <p>
+        Pour exercer ces droits, contactez-moi à :
+        <a href="mailto:louiseorione.pro@gmail.com">louiseorione.pro@gmail.com</a>
+      </p>
+      <p>
+        Vous avez également le droit d'introduire une réclamation auprès de
+        l'autorité de contrôle compétente en France :
+        <a href="https://www.cnil.fr" target="_blank" rel="noopener">
+          Commission Nationale de l'Informatique et des Libertés (CNIL)</a>.
+      </p>
+    </section>
+
+
+    <!-- 6. Mise à jour -->
+    <section class="privacy-section">
+      <h2>6. Mise à jour de cette politique</h2>
+      <p>
+        Cette politique peut être mise à jour en cas d'évolution du site
+        ou de la réglementation applicable. La date de dernière modification
+        est indiquée en haut de cette page.
+      </p>
+    </section>
+
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+    </div>
+  </footer>
+
+
+  <script src="javascripts/ui.js"></script>
+  <script>
+    setActiveNav('');
+  </script>
+
+</body>
+</html>

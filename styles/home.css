@@ -1,0 +1,653 @@
+/* ============================================================================
+   home.css — Page d'accueil
+   Structure : showreel → bio + projet mis en avant → timeline → footer
+   ============================================================================ */
+
+   
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BODY — scroll vertical normal sur toute la page
+   La timeline est dans le flux, pas fixe.
+───────────────────────────────────────────────────────────────────────────── */
+body.home-page {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+}
+
+/* Sur cette page, le logo garde sa grande taille */
+body.home-page .logo-svg {
+  /* Fluide comme sur les autres pages — grand sur desktop, petit sur mobile */
+  height: clamp(60px, 18vw, 300px);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SECTION 1 : SHOWREEL
+   Commence sous le header fixe (padding-top = hauteur header).
+   Grande zone vidéo pleine largeur, fond gris clair en attendant la vidéo.
+───────────────────────────────────────────────────────────────────────────── */
+.home-showreel {
+  padding-top: var(--header-h);
+  width: 100%;
+}
+
+.home-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* ratio 16:9 */
+  background-color: var(--color-clip-light);
+  overflow: hidden;
+  transition: background-color var(--transition-med);
+
+  /* Placeholder "showreel" centré si pas de vidéo */
+  display: block;
+}
+
+/* Label "showreel" centré dans le fond gris (visible avant chargement) */
+.home-video-wrapper::after {
+  content: 'showreel';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transition: color var(--transition-med);
+}
+
+.home-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: none;
+  /* La vidéo est par-dessus le ::after */
+  z-index: 1;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SECTION 2 : À PROPOS + PROJET MIS EN AVANT
+   Deux colonnes :
+     Gauche (55%) — logo, bio, email, CV
+     Droite (45%) — vignette du projet phare
+───────────────────────────────────────────────────────────────────────────── */
+.home-about {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: start;
+
+  padding: clamp(48px, 7vw, 96px) clamp(48px, 8vw, 120px);
+}
+
+/* ── Colonne gauche ── */
+.home-about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Logo répété en petit (comme wireframe) */
+.home-about-logo {
+  height: clamp(60px, 8vw, 100px);
+  width: auto;
+  display: block;
+  margin-bottom: 4px;
+  transition: filter var(--transition-med);
+}
+
+[data-theme="dark"] .home-about-logo {
+  filter: invert(1);
+}
+
+/* Bio */
+.home-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Accroche en gras */
+.home-bio-tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text);
+  transition: color var(--transition-med);
+}
+
+/* Corps de bio */
+.home-bio-text p {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text);
+  transition: color var(--transition-med);
+}
+
+.home-bio-text p + p {
+  margin-top: 12px;
+}
+
+/* Email + bouton CV */
+.home-about-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-email {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.home-email:hover { color: var(--color-text); }
+
+/* Bouton CV — texte rouge souligné, comme sur le wireframe */
+.home-cv-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-playhead); /* Rouge */
+  text-decoration: none;
+  width: fit-content;
+  border-bottom: 1px solid var(--color-playhead);
+  padding-bottom: 1px;
+  transition: opacity var(--transition-fast);
+}
+
+.home-cv-btn:hover { opacity: 0.7; }
+
+/* ── Colonne droite : projet mis en avant ── */
+.home-about-right {
+  position: sticky;
+  top: calc(var(--header-h) + 24px); /* Reste visible en scrollant */
+}
+
+/* Lien cliquable vers la page du projet */
+.home-featured-project {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image du projet */
+.home-featured-img-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.home-featured-img {
+  display: block;
+  width: 100%;
+  height: clamp(200px, 30vw, 400px);
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-featured-project:hover .home-featured-img {
+  transform: scale(1.02);
+}
+
+/* Étiquette sous l'image */
+.home-featured-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 12px;
+}
+
+/* Type en rouge */
+.home-featured-type {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--color-playhead);
+  text-transform: uppercase;
+}
+
+/* Titre du projet */
+.home-featured-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.4;
+  transition: color var(--transition-med);
+}
+
+/* Description courte */
+.home-featured-desc {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  transition: color var(--transition-med);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SECTION 3 : TIMELINE DES DERNIERS PROJETS
+   Titre rouge "Derniers Projets", puis zone de scroll horizontal.
+   La timeline a une hauteur fixe et est scrollable via wheel/touch.
+───────────────────────────────────────────────────────────────────────────── */
+.home-projects {
+  padding-top: clamp(32px, 5vw, 60px);
+  /* Pas de padding-left/right : la timeline est bord à bord */
+}
+
+/* Titre "Derniers Projets" en rouge, avec marge latérale */
+.home-projects-title {
+  font-family: var(--font-mono);
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-playhead); /* Rouge comme sur le wireframe */
+  padding: 0 clamp(24px, 4vw, 60px);
+  margin-bottom: 20px;
+  transition: color var(--transition-med);
+}
+
+/* Conteneur de la timeline — hauteur fixe, overflow hidden */
+.home-timeline-wrap {
+  position: relative;
+  /* Hauteur totale = depuis le bas du titre jusqu'à la règle incluse */
+  height: calc(var(--ruler-top));
+  overflow: hidden;
+  width: 100%;
+}
+
+/* On réutilise les éléments fixed de style.css MAIS dans ce contexte
+   la timeline est dans le flux (pas fixed sur toute la page).
+   On les "remet dans le flux" via position absolute dans le wrap. */
+.home-page .timeline-canvas {
+  position: absolute;
+  top: var(--header-h);
+  left: 0;
+  /* La hauteur est calculée pour laisser de la place à la règle */
+  height: calc(var(--ruler-top) - var(--header-h) - var(--nav-h));
+}
+
+.home-page .playhead {
+  position: absolute;
+  top: 0;
+  height: var(--ruler-top);
+}
+
+.home-page .timeline-ruler {
+  position: absolute;
+  top: var(--ruler-top);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Clips cliquables */
+.home-page .project-clip {
+  pointer-events: auto;
+}
+
+/* Lien "voir plus de projets ici : ● archives" */
+.home-archives-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: clamp(20px, 3vw, 32px) clamp(24px, 4vw, 60px);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  transition: color var(--transition-med);
+}
+
+/* "● archives" en rouge */
+.home-archives-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-playhead);
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity var(--transition-fast);
+}
+
+.home-archives-link:hover { opacity: 0.7; }
+
+.home-archives-dot {
+  font-size: 8px;
+  line-height: 1;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FOOTER
+   Contacts à gauche + copyright + politique de confidentialité à droite.
+   Ligne fine au-dessus.
+───────────────────────────────────────────────────────────────────────────── */
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  padding: 20px clamp(24px, 4vw, 60px);
+  border-top: 1px solid var(--color-ruler-line);
+  transition: border-color var(--transition-med);
+}
+
+/* Contacts (gauche) */
+.home-footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Droite : copyright + politique */
+.home-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Liens du footer */
+.home-footer-link {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.home-footer-link:hover { color: var(--color-text); }
+
+/* Copyright */
+.home-footer-copy {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  transition: color var(--transition-med);
+}
+
+/* Séparateur · entre les liens */
+.home-footer-sep {
+  font-size: 9px;
+  color: var(--color-text-faint);
+  user-select: none;
+}
+
+/* Petit soleil dans le header nav */
+.header-sun {
+  color: var(--color-playhead);
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CAROUSEL — zone + playhead + cartes
+───────────────────────────────────────────────────────────────────────────── */
+
+/* En-tête de section */
+.home-projects-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(24px, 4vw, 60px);
+  margin-bottom: 20px;
+}
+
+.home-projects-hint {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  transition: color var(--transition-med);
+}
+
+/* Zone contenant le playhead + le carousel */
+.home-carousel-zone {
+  position: relative;
+  width: 100%;
+  /* Petit espace au-dessus pour le playhead */
+  padding-top: 20px;
+  overflow: hidden;  /* Masque les cartes qui sortent à droite */
+}
+
+/* Playhead rouge horizontal — se déplace selon le scroll */
+.home-playhead {
+  position: absolute;
+  top: 0;
+  left: 24px; /* Position initiale = tout à gauche */
+  width: 2px;
+  /* Descend jusqu'en bas du carousel */
+  bottom: 0;
+  background-color: var(--color-playhead);
+  box-shadow: 0 0 8px rgba(230, 50, 35, 0.3);
+  pointer-events: none;
+  z-index: 10;
+  transition: left 0.1s linear; /* Suit le scroll en douceur */
+}
+
+/* Petite tête en triangle en bas du playhead */
+.home-playhead::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left:  5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top:   8px solid var(--color-playhead);
+}
+
+/* Le carousel lui-même */
+.home-carousel {
+  display: flex;
+  gap: 16px;
+  /*overflow-x: auto;*/
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 8px 0 32px clamp(24px, 4vw, 60px);
+  will-change: transform;  /* Optimise les performances GPU */
+  /* Pas de cursor:grab — on scrolle à la molette */
+}
+
+.home-carousel::-webkit-scrollbar { display: none; }
+
+/* Chaque carte */
+.home-carousel-card {
+  flex: 0 0 auto;
+  width: clamp(240px, 28vw, 380px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-card-img-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.home-card-img {
+  display: block;
+  width: 100%;
+  height: clamp(150px, 20vw, 280px);
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-card-placeholder {
+  background-color: var(--color-clip-light);
+  transition: background-color var(--transition-med);
+}
+
+.home-carousel-card:hover .home-card-img {
+  transform: scale(1.03);
+}
+
+.home-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.home-card-year {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  transition: color var(--transition-med);
+}
+
+.home-card-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--color-text);
+  transition: color var(--transition-med);
+}
+
+/* Responsive */
+/* ── Tablette et mobile ── */
+@media (max-width: 600px) {
+
+  /* Header compact sur mobile — même que archives */
+  body.home-page {
+    --header-h: 80px;
+  }
+
+  body.home-page .logo-svg {
+    height: 48px;
+  }
+
+  /* Showreel : ratio moins large pour être visible */
+  .home-video-wrapper {
+    padding-top: 70%;
+  }
+
+  /* Section bio : une seule colonne, marges réduites */
+  .home-about {
+    grid-template-columns: 1fr;
+    padding: 28px 16px;
+    gap: 20px;
+  }
+
+  /* Logo répété dans la bio : masqué sur mobile
+     (le vrai logo est déjà dans le header) */
+  .home-about-logo {
+    display: none;
+  }
+
+  /* Texte bio plus lisible */
+  .home-bio { gap: 10px; }
+
+  .home-bio-tagline {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  .home-bio-text p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  /* Projet mis en avant : pas sticky */
+  .home-about-right { position: static; }
+
+  .home-featured-img {
+    height: clamp(160px, 52vw, 260px);
+  }
+
+  .home-featured-title { font-size: 11px; }
+  .home-featured-desc  { font-size: 9px; }
+
+  /* Liens CV côte à côte */
+  .home-about-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Titre section projets */
+  .home-projects-header {
+    padding: 0 16px;
+  }
+
+  .home-projects-title { font-size: 12px; }
+
+  /* Zone carousel */
+  .home-carousel-zone { padding-top: 14px; }
+
+  /* Cartes carousel */
+  .home-carousel-card { width: clamp(200px, 72vw, 300px); }
+
+  .home-card-img {
+    height: clamp(120px, 42vw, 200px);
+  }
+
+  .home-card-title { font-size: 11px; }
+
+  /* Lien archives */
+  .home-archives-hint {
+    padding: 8px 16px 0;
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  /* Footer */
+ .home-footer {
+    flex-direction: column;
+    align-items: center;    /* Centre tout */
+    text-align: center;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .home-footer-contacts {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-footer-right { 
+    flex-wrap: wrap; 
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .home-footer-link,
+  .home-footer-copy { font-size: 8px; }
+}

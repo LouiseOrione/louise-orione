@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Modifie ce titre ── -->
+  <title>The Cardboard Box — Louise Orione</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/project-page.css" />
+</head>
+
+<body class="project-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Header — identique sur toutes les pages -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="proj-main">
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         1. BANDEAU — image pleine largeur, bord à bord
+         Première chose visible en arrivant sur la page.
+         Remplace src par ton image principale.
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="proj-bandeau">
+      <img
+        src="imports/cardboardbox.jpg"
+        alt="Image principale du projet"
+        class="proj-bandeau-img"
+        loading="eager"
+      >
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         2. INTRO — nom du projet + description courte
+         Centré sous le bandeau, avec des marges confortables.
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-intro">
+
+      <!-- Métadonnées : année · type · rôle — modifie ces valeurs -->
+      <div class="proj-meta">
+        <span class="proj-meta-item">2023</span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Court-métrage d'animation"
+          data-en="Short Animation">
+          Court-métrage d'animation
+        </span>
+      </div>
+
+      <!-- Titre — modifie data-fr, data-en et le texte -->
+      <h1 class="proj-title" data-fr="The Carboard Box" data-en="The Carboard Box">
+        The Carboard Box
+      </h1>
+
+      <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+          Avril 2023
+          <br>
+          <br>Une série animée éducative fictive pour apprendre les formes aux jeunes enfants.
+          <br>
+          <br>Ce premier épisode a été animé avec l'outil Grease Pencil de Blender, permettant de mêler graphismes 2D et 3D. Le décor et les personnages s'inspirent de mon enfance personnelle.
+          <br>Blender (Grease Pencil), After Effects, Premiere Pro, ProTools.
+        </p>
+        <p data-lang-block="en" style="display:none">
+          April 2023
+          <br>
+          <br>A fictional animated educational serie for young children to learn shapes.
+          <br>
+          <br>This first episode was animated using the Grease Pencil tool in blender to mix 2D and 3D graphics. The decor and the characters are inspired by my personnal childhood.
+          <br>Blender (Grease Pencil), After Effects, Premiere Pro, ProTools.
+        </p>
+      </div>
+
+            <!-- Liens externes avec vignettes YouTube -->
+    <div class="proj-video-links">
+
+    <a href="https://youtu.be/zFl2wpQS7jw" target="_blank" rel="noopener" class="proj-video-link">
+        <div class="proj-video-thumb">
+        <img
+            src="imports/cardboardbox.jpg"
+            alt="Film d'animation"
+            class="proj-video-thumb-img"
+            loading="lazy"
+        >
+        <div class="proj-video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="10" fill="rgba(0,0,0,0.55)"/>
+            <path d="M8 6.5L14 10L8 13.5V6.5Z" fill="white"/>
+            </svg>
+        </div>
+        </div>
+        <span class="proj-video-link-label">
+        <span data-fr="The Cardboard Box" data-en="The Cardboard Box">The Cardboard Box</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+        </span>
+    </a>
+    </div>
+
+    </section>
+
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         4. NAVIGATION — projet précédent / timeline / projet suivant
+         Modifie les href, noms et années.
+    ══════════════════════════════════════════════════════════════════ -->
+    <nav class="proj-nav" aria-label="Navigation entre projets">
+
+      <!-- Projet précédent — modifie href, nom, année -->
+      <a href="sousdome.html" class="proj-nav-link proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="← Précédent" data-en="← Previous">← Précédent</span>
+        <span class="proj-nav-name">Festival #sousdôme</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+      <!-- Retour à la timeline -->
+      <a href="index.html" class="proj-nav-home" aria-label="Retour à la timeline">
+        <svg class="proj-nav-sun" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+          <line x1="12" y1="2"  x2="12" y2="5"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="2"  y1="12" x2="5"  y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <!-- Projet suivant — modifie href, nom, année -->
+      <a href="bluelions.html" class="proj-nav-link proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant →" data-en="Next →">Suivant →</span>
+        <span class="proj-nav-name">Blue Lions</span>
+        <span class="proj-nav-year">2022</span>
+      </a>
+
+    </nav>
+
+
+  </main>
+
+
+  <!-- Contacts en bas à gauche — identique sur toutes les pages -->
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/ui.js"></script>
+  <script>
+    setActiveNav('');
+
+
+  </script>
+
+  <!-- Carousel : script indépendant, basé sur style.display direct -->
+  <script>
+    (function() {
+      function initCarousels() {
+        document.querySelectorAll('.proj-carousel').forEach(function(carousel) {
+          var imgs    = Array.from(carousel.querySelectorAll('.proj-carousel-img'));
+          var prev    = carousel.querySelector('.proj-carousel-prev');
+          var next    = carousel.querySelector('.proj-carousel-next');
+          var counter = carousel.querySelector('.proj-carousel-current');
+          var totalEl = carousel.querySelector('.proj-carousel-total');
+
+          if (!imgs.length) return;
+
+          /* Gère l'affichage via style.display — indépendant du CSS */
+          imgs.forEach(function(img, i) {
+            img.style.display = i === 0 ? 'block' : 'none';
+            img.style.width   = '100%';
+            img.style.height  = 'clamp(320px, 55vw, 720px)';
+            img.style.objectFit = 'cover';
+          });
+
+          var idx = 0;
+          if (totalEl) totalEl.textContent = imgs.length;
+          if (counter) counter.textContent = '1';
+
+          function show(n) {
+            imgs[idx].style.display = 'none';
+            idx = ((n % imgs.length) + imgs.length) % imgs.length;
+            imgs[idx].style.display = 'block';
+            if (counter) counter.textContent = String(idx + 1);
+          }
+
+          if (prev) prev.onclick = function() { show(idx - 1); };
+          if (next) next.onclick = function() { show(idx + 1); };
+
+          /* Swipe tactile */
+          var tx = 0;
+          carousel.addEventListener('touchstart', function(e) {
+            tx = e.touches[0].clientX;
+          }, { passive: true });
+          carousel.addEventListener('touchend', function(e) {
+            var dx = e.changedTouches[0].clientX - tx;
+            if (dx > 40)  show(idx - 1);
+            if (dx < -40) show(idx + 1);
+          }, { passive: true });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousels);
+      } else {
+        initCarousels();
+      }
+    })();
+  </script>
+</body>
+</html>

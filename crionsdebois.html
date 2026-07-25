@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Modifier ce titre ── -->
+  <title>Crions de bois — Louise Orione</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/project-page.css" />
+</head>
+
+<body class="project-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Header — identique sur toutes les pages -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="proj-main">
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         1. BANDEAU
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="proj-bandeau">
+      <img
+        src="imports/CRIONS/brutpop02.jpg"
+        alt="Image principale du projet"
+        class="proj-bandeau-img"
+        loading="eager"
+      >
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         2. INTRO — nom du projet + description courte
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-intro">
+
+      <!-- Métadonnées : année · type · rôle -->
+      <div class="proj-meta">
+        <span class="proj-meta-item">2024</span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Installation intéractive"
+          data-en="Interactive Installation">
+          Installation intéractive
+        </span>
+      </div>
+
+      <!-- Titre — modifie data-fr, data-en et le texte -->
+      <h1 class="proj-title" data-fr="Crions de bois" data-en="Crions de bois">
+        Crions de bois
+      </h1>
+
+      <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+          Septembre 2024
+          <br>
+          <br>Une fresque interactive qui transforme le geste en son et invite à faire du bruiiiiiit !
+          <br>
+          <br>Crions de bois est une fresque sonore interactive réalisée dans le cadre de la kermesse Sport & Noise organisée à Mains d’Oeuvres de Saint-Ouen, en collaboratio avec BrutPop. Inspirée des Jeux Paralympiques de 2024, cette initiative collective, inclusive et expérimentale avait pour mot d’ordre : faire du bruiiiiiit !
+          <br>
+          <br>Avec Ornella Antony et Elysa Picquendar, nous avons conçu une installation interactive à partir d’un objet du quotidien, sous forme de fresque-labyrinthe. Dessinée au graphite conducteur, elle déclenche des sons en temps réel au contact d’un crayon, transformant le geste graphique en expérience sonore. Inspirée des terrains de sport, la composition joue avec l’anamorphose et la superposition de lignes pour créer un espace à la fois ludique et désorientant.
+          <br>Entre bricolage électronique, détournement de circuits et scénographie de récupération, Crions de bois explore une forme d’arte povera numérique où le son, le geste et l’espace deviennent des outils d’interaction et de convivialité.
+        </p>
+        <p data-lang-block="en" style="display:none">
+          September 2024
+          <br>
+          <br>An interactive fresco that turns gesture into sound and invites everyone to make some noiiiise!
+          <br>
+          <br>Crions de bois is an interactive sound fresco created for the Sport & Noise fair at Mains d'Œuvres of Saint-Ouen, in collaboration with BrutPop. Inspired by the 2024 Paralympic Games, this collective, inclusive and experimental initiative had one rallying cry: make some noiiiise!
+          <br>
+          <br>With Ornella Antony and Elysa Picquendar, we designed an interactive installation built from everyday objects, in the form of a maze-like fresco. Drawn with conductive graphite, it triggers real-time sounds on contact with a pencil, turning the graphic gesture into a sonic experience. Inspired by sports fields, the composition plays with anamorphosis and overlapping lines to create a space that is both playful and disorienting.
+          <br>Blending electronic tinkering, circuit hacking and salvaged scenography, Crions de bois explores a form of digital arte povera, where sound, gesture and space become tools for interaction and conviviality.
+        </p>
+      </div>
+
+      <!-- Liens externes — supprime cette div si inutile -->
+      <div class="proj-links">
+        <a href="https://www.instagram.com/reel/DDxDp8wsZYL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="proj-ext-link">
+          <span data-fr="Montage vidéo" data-en="Video edit">Montage vidéo</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor"
+              stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         3. GALERIE — médias du projet
+           .proj-row                → une image seule (pleine largeur de la colonne)
+           .proj-row.proj-row--duo  → deux médias côte à côte
+           .proj-row.proj-row--trio → trois médias sur la même ligne
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-gallery">
+
+      <!-- ── Carousel — une image à la fois, navigue avec les flèches ── -->
+      <div class="proj-row">
+        <figure class="proj-item">
+
+          <div class="proj-carousel" id="wedocCarousel">
+
+            <button class="proj-carousel-btn proj-carousel-prev" aria-label="Image précédente" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-stage">
+              <!-- Image 1 — remplace src par ta vraie image -->
+              <img src="imports/CRIONS/kermesse01.jpg" alt=" Crions de bois — image 1" class="proj-carousel-img is-active" loading="lazy">
+              <!-- Image 2 — remplace src par ta vraie image -->
+              <img src="imports/CRIONS/kermesse02.jpg" alt=" Crions de bois — image 2" class="proj-carousel-img" loading="lazy">
+              <!-- Image 3 — remplace src par ta vraie image -->
+              <img src="imports/CRIONS/kermesse03.jpg" alt=" Crions de bois — image 3" class="proj-carousel-img" loading="lazy">
+              <!-- Image 4 — remplace src par ta vraie image -->
+              <img src="imports/CRIONS/kermesse04.jpg" alt=" Crions de bois — image 4" class="proj-carousel-img" loading="lazy">
+              <!-- Image 5 — remplace src par ta vraie image -->
+              <img src="imports/CRIONS/kermesse05.jpg" alt=" Crions de bois — image 5" class="proj-carousel-img" loading="lazy">
+              <!-- Image 6 — remplace src par ta vraie image -->
+              <img src="imports/CRIONS/kermesse06.jpg" alt=" Crions de bois — image 6" class="proj-carousel-img" loading="lazy">
+              <!-- Image 7 — remplace src par ta vraie image -->
+              <img src="imports/CRIONS/brutpop03.jpg" alt=" Crions de bois — image 7" class="proj-carousel-img" loading="lazy">            
+            </div>
+
+            <button class="proj-carousel-btn proj-carousel-next" aria-label="Image suivante" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M5 2L10 7L5 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-count">
+              <span class="proj-carousel-current">1</span>
+              <span class="proj-carousel-sep">/</span>
+              <span class="proj-carousel-total"></span>
+            </div>
+
+          </div>
+
+        </figure>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         4. NAVIGATION — projet précédent / timeline / projet suivant
+    ══════════════════════════════════════════════════════════════════ -->
+    <nav class="proj-nav" aria-label="Navigation entre projets">
+
+      <!-- Projet précédent — modifie href, nom, année -->
+      <a href="whatif.html" class="proj-nav-link proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="← Précédent" data-en="← Previous">← Précédent</span>
+        <span class="proj-nav-name">What if we sorted our data</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+      <!-- Retour à la timeline -->
+      <a href="index.html" class="proj-nav-home" aria-label="Retour à la timeline">
+        <svg class="proj-nav-sun" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+          <line x1="12" y1="2"  x2="12" y2="5"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="2"  y1="12" x2="5"  y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <!-- Projet suivant — modifie href, nom, année -->
+      <a href="map.html" class="proj-nav-link proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant →" data-en="Next →">Suivant →</span>
+        <span class="proj-nav-name">Maps</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+    </nav>
+
+
+  </main>
+
+
+  <!-- Contacts en bas à gauche — identique sur toutes les pages -->
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/ui.js"></script>
+  <script>
+    setActiveNav('');
+
+
+  </script>
+
+  <!-- Carousel : script indépendant, basé sur style.display direct -->
+  <script>
+    (function() {
+      function initCarousels() {
+        document.querySelectorAll('.proj-carousel').forEach(function(carousel) {
+          var imgs    = Array.from(carousel.querySelectorAll('.proj-carousel-img'));
+          var prev    = carousel.querySelector('.proj-carousel-prev');
+          var next    = carousel.querySelector('.proj-carousel-next');
+          var counter = carousel.querySelector('.proj-carousel-current');
+          var totalEl = carousel.querySelector('.proj-carousel-total');
+
+          if (!imgs.length) return;
+
+          /* Gère l'affichage via style.display — indépendant du CSS */
+          imgs.forEach(function(img, i) {
+            img.style.display = i === 0 ? 'block' : 'none';
+            img.style.width   = '100%';
+            img.style.height  = 'clamp(320px, 55vw, 720px)';
+            img.style.objectFit = 'cover';
+          });
+
+          var idx = 0;
+          if (totalEl) totalEl.textContent = imgs.length;
+          if (counter) counter.textContent = '1';
+
+          function show(n) {
+            imgs[idx].style.display = 'none';
+            idx = ((n % imgs.length) + imgs.length) % imgs.length;
+            imgs[idx].style.display = 'block';
+            if (counter) counter.textContent = String(idx + 1);
+          }
+
+          if (prev) prev.onclick = function() { show(idx - 1); };
+          if (next) next.onclick = function() { show(idx + 1); };
+
+          /* Swipe tactile */
+          var tx = 0;
+          carousel.addEventListener('touchstart', function(e) {
+            tx = e.touches[0].clientX;
+          }, { passive: true });
+          carousel.addEventListener('touchend', function(e) {
+            var dx = e.changedTouches[0].clientX - tx;
+            if (dx > 40)  show(idx - 1);
+            if (dx < -40) show(idx + 1);
+          }, { passive: true });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousels);
+      } else {
+        initCarousels();
+      }
+    })();
+  </script>
+</body>
+</html>

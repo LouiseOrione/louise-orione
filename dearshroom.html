@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Modifie ce titre ── -->
+  <title>Dear Shroom — Louise Orione</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/project-page.css" />
+</head>
+
+<body class="project-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Header — identique sur toutes les pages -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="proj-main">
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         1. BANDEAU — image pleine largeur, bord à bord
+         Première chose visible en arrivant sur la page.
+         Remplace src par ton image principale.
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="proj-bandeau">
+      <img
+        src="imports/SHROOM/shroombanner.jpg"
+        alt="Image principale du projet"
+        class="proj-bandeau-img"
+        loading="eager"
+      >
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         2. INTRO — nom du projet + description courte
+         Centré sous le bandeau, avec des marges confortables.
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-intro">
+
+      <!-- Métadonnées : année · type · rôle — modifie ces valeurs -->
+      <div class="proj-meta">
+        <span class="proj-meta-item">2025</span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Design-fiction et Recherche-Création, Linguistique spéculative"
+          data-en="Design Fiction and Research-Creation, Speculative Linguistics">
+          Design-fiction et Recherche-Création, Linguistique spéculative
+        </span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Direction Artistique"
+          data-en="Artistic Direction">
+          Direction Artistique
+        </span>
+      </div>
+
+
+      <!-- Titre — modifie data-fr, data-en et le texte -->
+      <h1 class="proj-title" data-fr="Dear Shroom data-en="Dear Shroom>
+        Dear Shroom
+      </h1>
+
+      <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+          Exposition spéculative qui imagine une langue future à travers un monde fictionnel construit entre recherche, écriture et dispositif multimédia.
+          <br>Novembre 2024 - Novembre 2025
+          <br>
+          <br>Dear Shroom est un projet hybride mêlant écriture, fanzine, objet, 3D et sérigraphie, réalisé en collaboration avec Ulysse Migeat pour l’exposition « Systèmes, comment s’écrit demain ? » à la BULAC (2025). Cette exposition a été conçue et dirigée par l’ensemble de la promotion de DSAA DCN de l’École Estienne.
+          <br>
+          <br>À partir des 80 systèmes d’écriture de la bibliothèque des langues et civilisations, nous avons développé un monde fictionnel et une langue spéculative autour d’un organisme fictif, le mycotel. Ce travail a été nourri par des échanges avec des intervenant·es, notamment Florian Targa (historien des langues, INALCO) et Ketty Steward (autrice française de science-fiction engagée).
+          <br>
+          <br>L’exposition est accompagnée d’un site web et d’un teaser, retraçant l’ensemble du dispositif, consultable ci-dessous.
+          <p data-lang-block="en" style="display:none">
+           A speculative exhibition imagining a future language through a fictional world built across research, writing and multimedia design.
+          <br>November 2024 – November 2025
+          <br>
+          <br>Dear Shroom is a hybrid project combining writing, zine-making, object design, 3D and screen printing, created in collaboration with Ulysse Migeat for the exhibition "Systèmes, comment s'écrit demain?" at the BULAC (2025). The exhibition was conceived and curated collectively by the entire DSAA DCN cohort at École Estienne.
+          <br>
+          <br>Drawing on the 80 writing systems held at the library of languages and civilizations, we developed a fictional world and a speculative language centered on an imaginary organism, the mycotel. This work was shaped by conversations with guest speakers, including Florian Targa (language historian, INALCO) and Ketty Steward (French science fiction author known for her socially engaged work).
+          <br>
+          <br>The exhibition is accompanied by a website and a teaser trailer retracing the full project, available below.
+        </p>
+      </div>
+
+      <!-- Lien externe simple sans vignette -->
+    <div class="proj-links" style="margin-top: 16px;">
+
+          <a href="https://dcn.eestienne.info/DSAA1/BULAC/systeme/index.html"
+            target="_blank" rel="noopener" class="proj-ext-link-thumb">
+
+            <!-- Vignette — remplace src par ton image -->
+            <div class="proj-ext-thumb-wrap">
+            <img
+                src="imports/SHROOM/shroom_affiche.jpg"
+                alt="Site-web de l'expo"
+                class="proj-ext-thumb-img"
+                loading="lazy"
+            >
+            </div>
+
+            <!-- Label avec flèche -->
+            <span class="proj-ext-thumb-label">
+            <span data-fr="Site-web de l'exposition" data-en="Website of the exhibition">En savoir plus sur l'exposition</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+            </svg>
+            </span>
+
+        </a>
+        <a href="https://indd.adobe.com/view/0f92a40c-47f0-497e-b37c-8d24366f40b3 "
+            target="_blank" rel="noopener" class="proj-ext-link-thumb">
+
+            <!-- Vignette — remplace src par ton image -->
+            <div class="proj-ext-thumb-wrap">
+            <img
+                src="imports/SHROOM/shroom14.jpg"
+                alt="Frise Chronologique"
+                class="proj-ext-thumb-img"
+                loading="lazy"
+            >
+            </div>
+
+            <!-- Label avec flèche -->
+            <span class="proj-ext-thumb-label">
+            <span data-fr="Voir la frise chronologique imprimée sur le kakemono" data-en="See the timeline printed on the hanging banner">Voir la frise chronologique imprimée sur le kakemono</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+            </svg>
+            </span>
+
+        </a>
+
+        <a href="https://indd.adobe.com/view/a853a230-5b36-4510-969a-5d1762198da6"
+            target="_blank" rel="noopener" class="proj-ext-link-thumb">
+
+            <!-- Vignette — remplace src par ton image -->
+            <div class="proj-ext-thumb-wrap">
+            <img
+                src="imports/SHROOM/shroom_fungzine.jpg"
+                alt="Fungzine"
+                class="proj-ext-thumb-img"
+                loading="lazy"
+            >
+            </div>
+
+            <!-- Label avec flèche -->
+            <span class="proj-ext-thumb-label">
+            <span data-fr="Lire le Fungzine" data-en="Read the Fungzine">Lire le Fungzine</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+            </svg>
+            </span>
+
+        </a>
+    </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         3. GALERIE — médias du projet
+         Toutes les images/vidéos ont de petites marges latérales.
+         Elles peuvent être seules, par 2 ou par 3 sur la même ligne.
+
+         BLOCS DISPONIBLES — copie/colle selon tes besoins :
+
+           .proj-row                → une image seule (pleine largeur de la colonne)
+           .proj-row.proj-row--duo  → deux médias côte à côte
+           .proj-row.proj-row--trio → trois médias sur la même ligne
+
+         Pour chaque média : remplace src/alt ou utilise un <div class="proj-video-wrap">
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-gallery">
+
+      <!-- ── Carousel — une image à la fois, navigue avec les flèches ── -->
+      <!-- Remplace les src par tes vraies images dans l'ordre voulu    -->
+      <div class="proj-row">
+        
+        <figure class="proj-item">
+
+          <div class="proj-carousel" id="wedocCarousel">
+
+            <button class="proj-carousel-btn proj-carousel-prev" aria-label="Image précédente" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-stage">
+              <!-- Image 1 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom03.jpg" alt="DEAR SHROOM — image 1" class="proj-carousel-img is-active" data-caption="©Affiche officielle de l'exposition à la" loading="lazy">
+              <!-- Image 2 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom06.jpg" alt="DEAR SHROOM — image 2" class="proj-carousel-img" data-caption="©Photo by Emelyne Phung" loading="lazy">
+              <!-- Image 3 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom17.jpg" alt="DEAR SHROOM — image 3" class="proj-carousel-img" data-caption="©Photo by Maxime Rusico" loading="lazy">
+              <!-- Image 4 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom16.jpg" alt="DEAR SHROOM — image 4" class="proj-carousel-img" data-caption="©Photos by Maxime Rusico" loading="lazy">
+              <!-- Image 5 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom19.jpg" alt="DEAR SHROOM — image 5" class="proj-carousel-img" data-caption="©Photo by Maxime Rusico" loading="lazy">
+            </div>
+
+            <button class="proj-carousel-btn proj-carousel-next" aria-label="Image suivante" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M5 2L10 7L5 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-count">
+              <span class="proj-carousel-current">1</span>
+              <span class="proj-carousel-sep">/</span>
+              <span class="proj-carousel-total"></span>
+            </div>
+
+          </div>
+
+        </figure>
+      </div>
+
+      <figcaption class="proj-caption"
+            data-fr="Photos de l'exposition à la BULAC"
+            data-en="Pictures of the exhibition at BULAC">
+            Photos de l'exposition à la BULAC
+        </figcaption>
+
+
+      
+       <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+          Le fanzine “Fungzine” rassemble des expérimentations visuelles produites tout au long du processus créatif, ainsi que des extraits du journal de bord d’un historien fictif ayant découvert le mycotel dans le futur et commencé à en déchiffrer les strates.
+        <p data-lang-block="en" style="display:none">
+          The zine Fungzine brings together visual experiments produced throughout the creative process, alongside excerpts from the fictional journal of a historian who discovers the mycotel in the future and begins deciphering its layers.
+        </p>
+      </div>
+       <!-- ── Carousel — une image à la fois, navigue avec les flèches ── -->
+      <!-- Remplace les src par tes vraies images dans l'ordre voulu    -->
+      <div class="proj-row">
+        
+        <figure class="proj-item">
+
+          <div class="proj-carousel" id="wedocCarousel">
+
+            <button class="proj-carousel-btn proj-carousel-prev" aria-label="Image précédente" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-stage">
+              <!-- Image 1 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom08.jpg" alt="DEAR SHROOM — image 1" class="proj-carousel-img is-active" data-caption="©Photos by Louise Orione" loading="lazy">
+              <!-- Image 2 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom10.jpg" alt="DEAR SHROOM — image 2" class="proj-carousel-img" data-caption="©Photo by Maxime Rusico" loading="lazy">
+              <!-- Image 3 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom11.jpg" alt="DEAR SHROOM — image 3" class="proj-carousel-img" data-caption="©Photo by Maxime Rusico" loading="lazy">
+              <!-- Image 4 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom12.jpg" alt="DEAR SHROOM — image 4" class="proj-carousel-img" data-caption="©Photo by Maxime Rusico" loading="lazy">
+              <!-- Image 5 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom15.jpg" alt="DEAR SHROOM — image 5" class="proj-carousel-img" data-caption="©Photo by Maxime Rusico" loading="lazy">
+              <!-- Image 6 — remplace src par ta vraie image -->
+              <img src="imports/SHROOM/shroom07.jpg" alt="DEAR SHROOM — image 6" class="proj-carousel-img" data-caption="©Photo by Maxime Rusico" loading="lazy">
+            </div>
+
+            <button class="proj-carousel-btn proj-carousel-next" aria-label="Image suivante" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M5 2L10 7L5 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-count">
+              <span class="proj-carousel-current">1</span>
+              <span class="proj-carousel-sep">/</span>
+              <span class="proj-carousel-total"></span>
+            </div>
+
+          </div>
+
+        </figure>
+      </div>
+
+      <figcaption class="proj-caption"
+            data-fr="Photos du Fanzine, objet editorial"
+            data-en="Pictures of the printed Fanzine">
+            Photos du Fanzine, objet editorial
+        </figcaption>
+
+      
+           <!-- ── Carousel — une image à la fois, navigue avec les flèches ── -->
+      <!-- Remplace les src par tes vraies images dans l'ordre voulu    -->
+      <div class="proj-row">
+        
+        <figure class="proj-item">
+
+          <div class="proj-carousel" id="wedocCarousel">
+
+            <button class="proj-carousel-btn proj-carousel-prev" aria-label="Image précédente" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-stage">
+              <!-- Vidéo — tourne en boucle automatiquement, sans son -->
+              <!-- Remplace src par ton fichier vidéo -->
+              <video
+                class="proj-carousel-img proj-carousel-video"
+                src="imports/SHROOM/shroom_traveling.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                data-caption="©Louise Orione"
+                style="display:none;width:100%;height:clamp(320px, 55vw, 720px);object-fit:cover;">
+              </video>
+              <!-- Image 1 -->
+              <img src="imports/SHROOM/shroom01.jpg" alt="DEAR SHROOM — image 1" class="proj-carousel-img is-active" data-caption="©3D by Louise Orione" loading="lazy">
+              <!-- Image 2 -->
+              <img src="imports/SHROOM/shroom31.jpg" alt="DEAR SHROOM — image 2" class="proj-carousel-img" data-caption="©3D by Louise Orione" loading="lazy">
+              <!-- Image 3 -->
+              <img src="imports/SHROOM/shroom32.jpg" alt="DEAR SHROOM — image 3" class="proj-carousel-img" data-caption="©3D by Louise Orione" loading="lazy">
+            </div>
+
+            <button class="proj-carousel-btn proj-carousel-next" aria-label="Image suivante" style="pointer-events:auto!important;cursor:pointer!important;z-index:100;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M5 2L10 7L5 12" stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="proj-carousel-count">
+              <span class="proj-carousel-current">1</span>
+              <span class="proj-carousel-sep">/</span>
+              <span class="proj-carousel-total"></span>
+            </div>
+
+          </div>
+
+        </figure>
+      </div>
+      <figcaption class="proj-caption"
+            data-fr="Renders 3D du Mycotel sur son arbre et de champignons invasifs (Blender) - Louise Orione"
+            data-en="3D renders of the Mycotel on its tree and of invasive fungi (Blender) - Louise Orione">
+            Renders 3D du Mycotel sur son arbre et de champignons invasifs (Blender) - Louise Orione
+      </figcaption>
+
+
+      
+
+    </section>
+
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         4. NAVIGATION — projet précédent / timeline / projet suivant
+         Modifie les href, noms et années.
+    ══════════════════════════════════════════════════════════════════ -->
+    <nav class="proj-nav" aria-label="Navigation entre projets">
+
+      <!-- Projet précédent — modifie href, nom, année -->
+      <a href="boats.html" class="proj-nav-link proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="← Précédent" data-en="← Previous">← Précédent</span>
+        <span class="proj-nav-name">Boats</span>
+        <span class="proj-nav-year">2025</span>
+      </a>
+
+      <!-- Retour à la timeline -->
+      <a href="index.html" class="proj-nav-home" aria-label="Retour à la timeline">
+        <svg class="proj-nav-sun" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+          <line x1="12" y1="2"  x2="12" y2="5"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="2"  y1="12" x2="5"  y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <!-- Projet suivant — modifie href, nom, année -->
+      <a href="echo.html" class="proj-nav-link proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant →" data-en="Next →">Suivant →</span>
+        <span class="proj-nav-name">Echo</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+    </nav>
+
+
+  </main>
+
+
+  <!-- Contacts en bas à gauche — identique sur toutes les pages -->
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/ui.js"></script>
+  <script>
+    setActiveNav('');
+  </script>
+
+  <script>
+    (function() {
+      function initCarousels() {
+        document.querySelectorAll('.proj-carousel').forEach(function(carousel) {
+          /* Sélectionne images ET vidéos dans le carousel */
+          var items   = Array.from(carousel.querySelectorAll('.proj-carousel-img'));
+          var prev    = carousel.querySelector('.proj-carousel-prev');
+          var next    = carousel.querySelector('.proj-carousel-next');
+          var counter = carousel.querySelector('.proj-carousel-current');
+          var totalEl = carousel.querySelector('.proj-carousel-total');
+
+          /* Légende — cherche ou crée un élément caption dans le carousel */
+          var captionEl = carousel.querySelector('.proj-carousel-caption');
+          if (!captionEl) {
+            captionEl = document.createElement('div');
+            captionEl.className = 'proj-carousel-caption';
+            carousel.appendChild(captionEl);
+          }
+
+          if (!items.length) return;
+
+          items.forEach(function(item, i) {
+            item.style.display   = i === 0 ? 'block' : 'none';
+            item.style.width     = '100%';
+            item.style.height    = 'clamp(320px, 55vw, 720px)';
+            item.style.objectFit = 'cover';
+          });
+
+          var idx = 0;
+          if (totalEl) totalEl.textContent = items.length;
+          if (counter) counter.textContent = '1';
+
+          /* Affiche la légende de l'élément courant */
+          function updateCaption() {
+            var cap = items[idx].getAttribute('data-caption') || '';
+            captionEl.textContent = cap;
+          }
+
+          function show(n) {
+            /* Pause la vidéo si c'en est une */
+            if (items[idx].tagName === 'VIDEO') items[idx].pause();
+
+            items[idx].style.display = 'none';
+            idx = ((n % items.length) + items.length) % items.length;
+            items[idx].style.display = 'block';
+
+            /* Lance la vidéo si le nouvel élément est une vidéo */
+            if (items[idx].tagName === 'VIDEO') {
+              items[idx].currentTime = 0;
+              items[idx].play();
+            }
+
+            if (counter) counter.textContent = String(idx + 1);
+            updateCaption();
+          }
+
+          if (prev) prev.onclick = function() { show(idx - 1); };
+          if (next) next.onclick = function() { show(idx + 1); };
+
+          var tx = 0;
+          carousel.addEventListener('touchstart', function(e) {
+            tx = e.touches[0].clientX;
+          }, { passive: true });
+          carousel.addEventListener('touchend', function(e) {
+            var dx = e.changedTouches[0].clientX - tx;
+            if (dx > 40)  show(idx - 1);
+            if (dx < -40) show(idx + 1);
+          }, { passive: true });
+
+          /* Affiche la légende initiale */
+          updateCaption();
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousels);
+      } else {
+        initCarousels();
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light" class="home">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Louise Orione — index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- Force le scroll sur cette page avant même que le CSS se charge -->
+  <script>
+    document.documentElement.style.cssText = 'overflow-y:auto!important;height:auto!important;overflow-x:hidden!important;';
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.style.cssText = 'overflow-y:auto!important;height:auto!important;overflow-x:hidden!important;';
+    });
+  </script>
+  <link rel="stylesheet" href="styles/home.css" />
+</head>
+<body class="home-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       HEADER
+       Nav : "accueil" souligné (actif) + "archives" + toggles
+  ══════════════════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <!-- "accueil" = lien actif sur cette page -->
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 1 : SHOWREEL
+       Grande zone grise pleine largeur, comme sur le wireframe.
+       Remplace src par ta vidéo ou ton embed Vimeo.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="home-showreel">
+    <div class="home-video-wrapper">
+
+      <!-- Option A : vidéo locale — remplace src et poster -->
+      <!-- autoplay + muted + loop = lecture automatique en boucle silencieuse
+           (muted est requis par les navigateurs pour autoriser l autoplay) -->
+      <video
+        class="home-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="imports/showreel-poster.jpg"
+        aria-label="Showreel Louise Orione"
+      >
+        <source src="imports/showreel.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Option B : Vimeo — décommente et remplace VIDEOID
+      <iframe
+        class="home-video"
+        src="https://player.vimeo.com/video/VIDEOID?title=0&byline=0&portrait=0"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        title="Showreel Louise Orione">
+      </iframe>
+      -->
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 2 : À PROPOS + PROJET MIS EN AVANT
+       Deux colonnes :
+         Gauche — logo répété, bio courte, email, CV
+         Droite — vignette du projet mis en avant (ex: (W)E-DOC)
+       Correspond exactement à la section du milieu du wireframe.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="home-about" id="about">
+
+    <!-- Colonne gauche : bio -->
+    <div class="home-about-left">
+
+      <!-- Bio courte -->
+      <div class="home-bio">
+
+        <!-- Accroche courte en gras -->
+        <p class="home-bio-tagline" data-lang-block="fr" style="font-size: clamp(16px, 2vw, 22px); line-height: 1.5;">
+          Direction artistique &amp; design d'expériences numériques<br>
+          Pratiques du montage, motion 2D/3D &amp; installations interactives.
+        </p>
+        <p class="home-bio-tagline" data-lang-block="en" style="font-size: clamp(16px, 2vw, 22px); line-height: 1.5; display:none">
+          Art Direction &amp; Digital Experience Design.<br>
+          Editing-led practices, 2D/3D motion &amp; interactive installations.
+        </p>
+
+        <!-- Bio développée -->
+        <div class="home-bio-text" data-lang-block="fr">
+          <p>Designeuse et directrice artistique en création (d'environnement)
+          numérique, avec une pratique du motion et des dispositifs interactifs.
+          Ayant grandi à Johannesburg, en Afrique du Sud, dans un contexte international,
+          j'ai développé une attention particulière aux récits, aux environnements et à
+          leur mise en relation.</p>
+          <p>Mon travail s'articule autour du montage, entendu comme un processus
+          d'assemblage et de circulation : je cherche à faire dialoguer des images,
+          des sons et des points de vue pour créer des expériences sensibles,
+          souvent à la croisée du documentaire, de la médiation et de l'expérimentation
+          numérique.</p>
+        </div>
+
+        <div class="home-bio-text" data-lang-block="en" style="display:none">
+          <p>Designer and Art Director working across digital experience design
+          and environmental narratives, with a practice grounded in motion and interactive
+          systems. Raised in Johannesburg within an international context, I developed
+          a sensitivity to storytelling, environments, and the relationships they construct.</p>
+          <p>My practice is rooted in editing as a method of assembly and circulation:
+          I design experiences that connect images, sounds, and perspectives, often situated
+          between documentary approaches, mediation, and digital experimentation.</p>
+        </div>
+
+      </div>
+
+      <!-- Coordonnées + CV -->
+      <div class="home-about-links">
+        <a href="mailto:louiseorione.pro@gmail.com" class="home-email">
+          louiseorione.pro@gmail.com
+        </a>
+        <!-- Lien CV — modifie href selon la langue active ou propose les deux -->
+        <a href="https://indd.adobe.com/view/0c10bfb3-9e8b-461b-9579-19588896bcf0" target="_blank" class="home-cv-btn">
+          <span data-fr="CV Français" data-en="CV Français">CV Français</span>
+        </a>
+        <a href="https://indd.adobe.com/view/7be4f788-8d49-4a60-8ec3-3acaa0a37684" target="_blank" class="home-cv-btn">
+          <span data-fr="English Resume" data-en="English Resume">English Resume</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Colonne droite : projet mis en avant
+         Remplace href, src, et les textes par le projet que tu veux mettre en avant.
+         Sur le wireframe c'est le mémoire (W)E-DOC. -->
+    <div class="home-about-right">
+      <a href="wedoc.html" class="home-featured-project">
+
+        <!-- Image du projet -->
+        <div class="home-featured-img-wrap">
+          <img
+            src="imports/WEDOC/21.jpg"
+            alt="(W)E-DOC — Mémoire de recherche"
+            class="home-featured-img"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Étiquette du projet (comme sur le wireframe : rouge + texte) -->
+        <div class="home-featured-label">
+          <!-- Type en rouge -->
+          <span class="home-featured-type"
+            data-fr="Mémoire de recherche"
+            data-en="Research thesis">
+            Mémoire de recherche
+          </span>
+          <!-- Titre + description courte -->
+          <span class="home-featured-title"
+            data-fr="(W)E-DOC: Un processus documentaire pluriel"
+            data-en="(W)E-DOC: A plural documentary process">
+            (W)E-DOC: Un processus documentaire pluriel
+          </span>
+          <span class="home-featured-desc"
+            data-fr="Ce mémoire interroge le documentaire comme processus vivant, construit à partir de subjectivités multiples et de récits en réseau."
+            data-en="This thesis questions documentary as a living process, built from multiple subjectivities and networked narratives.">
+            Ce mémoire interroge le documentaire comme processus vivant, construit
+            à partir de subjectivités multiples et de récits en réseau.
+          </span>
+        </div>
+
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 3 : DERNIERS PROJETS — carousel horizontal
+       Scroll avec la molette en survolant, playhead rouge qui suit.
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="home-projects" id="projects">
+
+    <div class="home-projects-header">
+      <h2 class="home-projects-title">
+        <span data-fr="Derniers Projets" data-en="Recent Work">Derniers Projets</span>
+      </h2>
+      <span class="home-projects-hint">
+        <span data-fr="scroller →" data-en="scroll →">scroller →</span>
+      </span>
+    </div>
+
+    <!-- Zone du carousel avec le playhead rouge -->
+    <div class="home-carousel-zone" id="carouselZone">
+
+      <!-- Playhead rouge — se déplace horizontalement selon le scroll -->
+      <div class="home-playhead" id="homePlayhead" aria-hidden="true"></div>
+
+      <!-- Les cartes — générées par JS depuis projects-data.js -->
+      <div class="home-carousel" id="homeCarousel" role="list"
+        aria-label="Derniers projets"></div>
+
+    </div>
+
+    <!-- Lien archives -->
+    <div class="home-archives-hint">
+      <span data-fr="voir plus de projets ici :" data-en="see more projects:">
+        voir plus de projets ici :
+      </span>
+      <a href="archives.html" class="home-archives-link">
+        <span class="home-archives-dot" aria-hidden="true">●</span>
+        <span data-fr="archives" data-en="archives">archives</span>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       FOOTER
+       Contacts à gauche + copyright à droite
+       + lien politique de confidentialité
+  ══════════════════════════════════════════════════════════════════════ -->
+  <footer class="home-footer">
+
+    <!-- Contacts -->
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+
+    <!-- Copyright + politique de confidentialité -->
+    <div class="home-footer-right">
+      <!-- Modifie l'année si besoin -->
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <!-- Crée une page privacy.html avec ta politique de confidentialité -->
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+
+  </footer>
+
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/ui.js"></script>
+
+  <script>
+    /* ══════════════════════════════════════════════════════
+       GÉNÉRATION DES CARTES DU CAROUSEL
+    ══════════════════════════════════════════════════════ */
+    (function buildCarousel() {
+      const carousel = document.getElementById('homeCarousel');
+      if (!carousel) return;
+
+      const lang     = document.documentElement.getAttribute('data-lang') || 'fr';
+      const projects = getFeaturedProjects();
+
+      projects.forEach(p => {
+        const title = p.title[lang] || p.title.fr;
+        const card  = document.createElement('a');
+        card.href      = p.href || '#';
+        card.className = 'home-carousel-card';
+        card.setAttribute('role', 'listitem');
+
+        card.innerHTML = `
+          <div class="home-card-img-wrap">
+            ${p.image
+              ? `<img src="${p.image}" alt="${title}" class="home-card-img" loading="lazy">`
+              : `<div class="home-card-img home-card-placeholder"></div>`
+            }
+          </div>
+          <div class="home-card-info">
+            <span class="home-card-year">${p.year}</span>
+            <span class="home-card-title"
+              data-fr="${p.title.fr}"
+              data-en="${p.title.en || p.title.fr}">${title}</span>
+          </div>
+        `;
+        carousel.appendChild(card);
+      });
+    })();
+
+
+    /* ══════════════════════════════════════════════════════
+       SCROLL HORIZONTAL AU SURVOL + PLAYHEAD QUI SUIT
+       - Molette = scroll gauche/droite quand souris dans la zone
+       - Le petit trait rouge se déplace selon la position de scroll
+    ══════════════════════════════════════════════════════ */
+    (function initCarousel() {
+      const zone     = document.getElementById('carouselZone');
+      const playhead = document.getElementById('homePlayhead');
+      const carousel = document.getElementById('homeCarousel');
+      if (!zone || !carousel) return;
+
+      /* ── État ── */
+      let targetScroll  = 0;
+      let currentScroll = 0;
+      let rafId         = null;
+      const LERP  = 0.08;
+      const SPEED = 3;
+
+      /* Largeur totale du contenu à faire défiler */
+      function getMaxScroll() {
+        return carousel.scrollWidth - zone.clientWidth;
+      }
+
+      /* ── Déplace les cartes en translateX au lieu de scrollLeft ──
+        Chaque carte se déplace à la même vitesse mais de manière
+        continue et progressive, pas par sauts. */
+      function applyScroll(scroll) {
+        carousel.style.transform = `translateX(${-scroll}px)`;
+
+        /* Playhead : de gauche à droite selon la progression */
+        if (playhead) {
+          const max      = getMaxScroll();
+          const progress = max > 0 ? scroll / max : 0;
+          const minX     = 24;
+          const maxX     = zone.clientWidth - 24;
+          playhead.style.left = (minX + progress * (maxX - minX)) + 'px';
+        }
+      }
+
+      /* ── Boucle d'animation avec inertie ── */
+      function animate() {
+        const diff = targetScroll - currentScroll;
+
+        if (Math.abs(diff) < 0.2) {
+          currentScroll = targetScroll;
+          applyScroll(currentScroll);
+          rafId = null;
+          return;
+        }
+
+        currentScroll += diff * LERP;
+        applyScroll(currentScroll);
+        rafId = requestAnimationFrame(animate);
+      }
+
+      function startAnimation() {
+        if (!rafId) rafId = requestAnimationFrame(animate);
+      }
+
+      /* ── Molette au survol ── */
+      let isHovering = false;
+      zone.addEventListener('mouseenter', () => { isHovering = true; });
+      zone.addEventListener('mouseleave', () => { isHovering = false; });
+
+      window.addEventListener('wheel', (e) => {
+        if (!isHovering) return;
+        e.preventDefault();
+        e.stopPropagation();
+
+        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        targetScroll = Math.max(0, Math.min(getMaxScroll(), targetScroll + delta * SPEED));
+        startAnimation();
+      }, { passive: false });
+
+      /* ── Swipe tactile ── */
+      let touchX = null;
+      zone.addEventListener('touchstart', (e) => {
+        touchX = e.touches[0].clientX;
+      }, { passive: true });
+
+      zone.addEventListener('touchmove', (e) => {
+        if (touchX === null) return;
+        const dx = touchX - e.touches[0].clientX;
+        targetScroll = Math.max(0, Math.min(getMaxScroll(), targetScroll + dx * 1.5));
+        touchX = e.touches[0].clientX;
+        startAnimation();
+      }, { passive: true });
+
+      /* Position initiale */
+      applyScroll(0);
+
+    })();
+
+
+    setActiveNav('index.html');
+  </script>
+
+</body>
+</html>

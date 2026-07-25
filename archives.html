@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Louise Orione — Archives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    :root { --ruler-top: 72vh; }
+  </style>
+</head>
+<body>
+
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Filtres de la timeline ── -->
+  <div class="timeline-filters" id="timelineFilters">
+    <button class="filter-btn is-active" data-type="all"
+      data-fr="Tous" data-en="All">Tous</button>
+    <button class="filter-btn" data-type="installation"
+      data-fr="Installation interactive" data-en="Interactive installation">Installation interactive</button>
+    <button class="filter-btn" data-type="motion"
+      data-fr="Motion Design" data-en="Motion Design">Motion Design</button>
+    <button class="filter-btn" data-type="documentaire"
+      data-fr="Documentaire" data-en="Documentary">Documentaire</button>
+    <button class="filter-btn" data-type="print"
+      data-fr="Print" data-en="Print">Print</button>
+  </div>
+
+  <div class="playhead" id="playhead" aria-hidden="true">
+    <div class="playhead-head"></div>
+  </div>
+
+  <main class="timeline-canvas" id="timelineCanvas" role="main"></main>
+
+  <div class="timeline-ruler" id="timelineRuler" aria-label="Règle temporelle">
+    <div class="ruler-track" id="rulerTrack"></div>
+    <div class="ruler-current-year" id="rulerCurrentYear"></div>
+  </div>
+
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+  </footer>
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/timeline.js"></script>
+  <script src="javascripts/ui.js"></script>
+  <script>
+    /* Lance la timeline avec tous les projets au démarrage */
+    initTimeline(getAllProjects());
+    setActiveNav('archives.html');
+
+    /* ── Filtres de la timeline ── */
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        /* Met à jour le bouton actif */
+        document.querySelectorAll('.filter-btn').forEach(function(b) {
+          b.classList.remove('is-active');
+        });
+        btn.classList.add('is-active');
+
+        /* Recharge la timeline avec les projets filtrés */
+        var type = btn.getAttribute('data-type');
+        initTimeline(getProjectsByType(type));
+      });
+    });
+  </script>
+
+</body>
+</html>

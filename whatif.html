@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Modifie ce titre ── -->
+  <title>What if we sorted our data — Louise Orione</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/project-page.css" />
+</head>
+
+<body class="project-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Header — identique sur toutes les pages -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="proj-main">
+    <!-- ══════════════════════════════════════════════════════════════
+         1. BANDEAU — image pleine largeur, bord à bord
+         Première chose visible en arrivant sur la page.
+         Remplace src par ton image principale.
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="proj-bandeau">
+      <img
+        src="imports/WHATIF/whatifbanner.jpg"
+        alt="Image principale du projet"
+        class="proj-bandeau-img"
+        loading="eager"
+      >
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         2. INTRO — nom du projet + description courte
+         Centré sous le bandeau, avec des marges confortables.
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-intro">
+      <!-- Métadonnées : année · type · rôle — modifie ces valeurs -->
+      <div class="proj-meta">
+        <span class="proj-meta-item">2024</span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Motion design"
+          data-en="Motion Design">
+          Motion Design
+        </span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Direction artistique, Motion Design"
+          data-en="Art direction, Montion Design">
+          Direction artistique, Motion Design
+        </span>
+      </div>
+
+      <!-- Titre — modifie data-fr, data-en et le texte -->
+      <h1 class="proj-title" data-fr="What if we sorted our data?" data-en="What if we sorted our data?">
+        What if we sorted our data?
+      </h1>
+
+      <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+           Octobre 2024
+           <br>
+           <br>Un film interactif qui rend visible la pollution numérique du cloud et interroge nos gestes de tri de données.
+           <br>
+           <br>What if we sorted our data? est un court film interactif réalisé en collaboration avec Albane Heitz. 
+           <br>Ce projet interroge le stockage massif des données dans le cloud et dans les centres de données, ainsi que la pollution numérique invisible générée par ces infrastructures souvent perçues comme immatérielles.
+           <br>
+           <br>À travers une approche animée et interactive, le film rend tangible cette “pollution du cloud” en donnant à voir l’accumulation, la circulation et la matérialité des données. Développée avec Processing, l’expérience propose une narration à choix : le spectateur peut décider de “trier les photos” ou non, activant ainsi deux scénarios possibles. Ce dispositif met en tension notre rapport aux gestes numériques quotidiens et leurs conséquences écologiques, dans une expérience à la fois pédagogique et sensible.
+        </p>
+        <p data-lang-block="en" style="display:none">
+           October 2024
+           <br>
+           <br>An interactive film that makes visible the digital pollution of the cloud and questions how we sort our data.
+           <br>
+           <br>What if we sorted our data? is a short interactive film created in collaboration with Albane Heitz. 
+           <br>This project examines the massive storage of data in the cloud and in data centers, as well as the invisible digital pollution generated by these infrastructures — often perceived as immaterial.
+           <br>
+           <br>Through an animated, interactive approach, the film makes this "cloud pollution" tangible, revealing the accumulation, circulation and materiality of data. Developed with Processing, the experience offers a choice-driven narrative: viewers can decide whether or not to "sort their photos," triggering one of two possible scenarios. The piece brings tension to our everyday digital habits and their ecological consequences, in an experience that is both educational and sensory.
+        </p>
+      </div>
+
+      <!-- Liens externes avec vignettes YouTube -->
+      <div class="proj-video-links">
+
+      <a href="https://youtu.be/C8xL504hI3U" target="_blank" rel="noopener" class="proj-video-link">
+        <!-- Le bouton play est DANS le thumb-wrap pour rester confiné à la vignette -->
+        <div class="proj-ext-thumb-wrap" style="position:relative;">
+          <img
+            src="imports/WHATIF/whatif01.png"
+            alt="Court-métrage documentaire"
+            class="proj-ext-thumb-img"
+            loading="lazy"
+          >
+          <div class="proj-video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" fill="rgba(0,0,0,0.55)"/>
+              <path d="M8 6.5L14 10L8 13.5V6.5Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <span class="proj-video-link-label">
+          <span data-fr="Voir le court-métrage" data-en="Watch the short film">Voir le court-métrage</span>
+          <svg width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <figcaption class="proj-caption"
+          data-fr="©Motion Design 2D/3D & Sound Design - Louise Orione; Caracter Design - Albane Heitz"
+          data-en="©Motion Design 2D/3D & Sound Design - Louise Orione; Caracter Design - Albane Heitz">
+          ©Motion Design 2D/3D & Sound Design - Louise Orione; Caracter Design - Albane Heitz
+        </figcaption>
+      </a>
+    </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         3. GALERIE — médias du projet
+         Toutes les images/vidéos ont de petites marges latérales.
+         Elles peuvent être seules, par 2 ou par 3 sur la même ligne.
+
+         BLOCS DISPONIBLES — copie/colle selon tes besoins :
+
+           .proj-row                → une image seule (pleine largeur de la colonne)
+           .proj-row.proj-row--duo  → deux médias côte à côte
+           .proj-row.proj-row--trio → trois médias sur la même ligne
+
+         Pour chaque média : remplace src/alt ou utilise un <div class="proj-video-wrap">
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-gallery">
+      <!-- ── 2 vidéos autoplay côte à côte (2ème paire) ── -->
+      <div class="proj-row proj-row--duo">
+
+        <figure class="proj-item">
+          <video
+            src="imports/WHATIF/passage01.mp4"
+            class="proj-img"
+            autoplay muted loop playsinline
+            style="object-fit:cover;"
+          ></video>
+          <figcaption class="proj-caption">©Louise Orione</figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <video
+            src="imports/WHATIF/passage03.mp4"
+            class="proj-img"
+            autoplay muted loop playsinline
+            style="object-fit:cover;"
+          ></video>
+          <figcaption class="proj-caption">©Louise Orione</figcaption>
+        </figure>
+
+      </div>
+  
+      <!-- ── 3 images côte à côte ── -->
+      <!-- Remplace les src par tes vraies images dans imports/WHATIF/ -->
+      <div class="proj-row proj-row--trio">
+
+        <figure class="proj-item">
+          <img src="imports/WHATIF/storyboard.jpg" alt="What If — image 1"
+            class="proj-img" loading="lazy">
+          <figcaption class="proj-caption">©Louise Orione</figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/WHATIF/messageVF.jpg" alt="What If — image 2"
+            class="proj-img" loading="lazy">
+          <figcaption class="proj-caption">©Louise Orione</figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/WHATIF/messanglais0.jpg" alt="What If — image 3"
+            class="proj-img" loading="lazy">
+          <figcaption class="proj-caption">©Louise Orione</figcaption>
+        </figure>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         4. NAVIGATION — projet précédent / timeline / projet suivant
+         Modifie les href, noms et années.
+    ══════════════════════════════════════════════════════════════════ -->
+    <nav class="proj-nav" aria-label="Navigation entre projets">
+
+      <!-- Projet précédent — modifie href, nom, année -->
+      <a href="affiches.html" class="proj-nav-link proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="← Précédent" data-en="← Previous">← Précédent</span>
+        <span class="proj-nav-name">Affiches</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+      <!-- Retour à la timeline -->
+      <a href="index.html" class="proj-nav-home" aria-label="Retour à la timeline">
+        <svg class="proj-nav-sun" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+          <line x1="12" y1="2"  x2="12" y2="5"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="2"  y1="12" x2="5"  y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <!-- Projet suivant — modifie href, nom, année -->
+      <a href="crionsdebois.html" class="proj-nav-link proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant →" data-en="Next →">Suivant →</span>
+        <span class="proj-nav-name">Crions de bois</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+    </nav>
+
+
+  </main>
+
+
+  <!-- Contacts en bas à gauche — identique sur toutes les pages -->
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/ui.js"></script>
+  <script>
+    setActiveNav('');
+  </script>
+
+  <script>
+    (function() {
+      function initCarousels() {
+        document.querySelectorAll('.proj-carousel').forEach(function(carousel) {
+          var imgs    = Array.from(carousel.querySelectorAll('.proj-carousel-img'));
+          var prev    = carousel.querySelector('.proj-carousel-prev');
+          var next    = carousel.querySelector('.proj-carousel-next');
+          var counter = carousel.querySelector('.proj-carousel-current');
+          var totalEl = carousel.querySelector('.proj-carousel-total');
+
+          if (!imgs.length) return;
+
+          imgs.forEach(function(img, i) {
+            img.style.display  = i === 0 ? 'block' : 'none';
+            img.style.width    = '100%';
+            img.style.height   = 'clamp(320px, 55vw, 720px)';
+            img.style.objectFit = 'cover';
+          });
+
+          var idx = 0;
+          if (totalEl) totalEl.textContent = imgs.length;
+          if (counter) counter.textContent = '1';
+
+          function show(n) {
+            imgs[idx].style.display = 'none';
+            idx = ((n % imgs.length) + imgs.length) % imgs.length;
+            imgs[idx].style.display = 'block';
+            if (counter) counter.textContent = String(idx + 1);
+          }
+
+          if (prev) prev.onclick = function() { show(idx - 1); };
+          if (next) next.onclick = function() { show(idx + 1); };
+
+          var tx = 0;
+          carousel.addEventListener('touchstart', function(e) {
+            tx = e.touches[0].clientX;
+          }, { passive: true });
+          carousel.addEventListener('touchend', function(e) {
+            var dx = e.changedTouches[0].clientX - tx;
+            if (dx > 40)  show(idx - 1);
+            if (dx < -40) show(idx + 1);
+          }, { passive: true });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousels);
+      } else {
+        initCarousels();
+      }
+    })();
+  </script>
+
+</body>
+</html>

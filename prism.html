@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Modifie ce titre ── -->
+  <title>Collectif Prism — Louise Orione</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/project-page.css" />
+</head>
+
+<body class="project-page">
+
+  <!-- Curseur soleil -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="4" fill="#ff8400"/>
+      <line x1="12" y1="2"  x2="12" y2="5"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="12" y1="19" x2="12" y2="22" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2"  y1="12" x2="5"  y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="#ff8400" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Header — identique sur toutes les pages -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+      <img src="imports/logo_louise.svg" alt="Louise Orione" class="logo-svg">
+    </a>
+    <div class="header-right">
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="index.html"    class="nav-link" data-fr="accueil"  data-en="home">accueil</a>
+        <a href="archives.html" class="nav-link" data-fr="archives" data-en="archives">archives</a>
+      </nav>
+      <div class="header-sep" aria-hidden="true"></div>
+      <div class="header-toggles">
+        <button class="top-bar-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="theme-icon theme-icon--light">☀︎</span>
+          <span class="theme-icon theme-icon--dark">☽</span>
+        </button>
+        <button class="top-bar-toggle lang-toggle" id="langToggle" aria-label="Changer la langue">
+          <span class="lang-label" data-lang-fr="FR" data-lang-en="EN">FR</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="proj-main">
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         1. BANDEAU — image pleine largeur, bord à bord
+         Première chose visible en arrivant sur la page.
+         Remplace src par ton image principale.
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="proj-bandeau">
+      <img
+        src="imports/PRISM/banner_prism01.jpg"
+        alt="Image principale du projet"
+        class="proj-bandeau-img"
+        loading="eager"
+      >
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         2. INTRO — nom du projet + description courte
+         Centré sous le bandeau, avec des marges confortables.
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-intro">
+
+      <!-- Métadonnées : année · type · rôle — modifie ces valeurs -->
+      <div class="proj-meta">
+        <span class="proj-meta-item">2026</span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Expérience immersive / Recherche-Création"
+          data-en="Immersive experience / Research-Creation">
+          Expérience immersive / Recherche-Création
+        </span>
+        <span class="proj-meta-sep">—</span>
+        <span class="proj-meta-item"
+          data-fr="Direction artistique"
+          data-en="Art direction">
+          Direction artistique
+        </span>
+      </div>
+
+      <!-- Titre — modifie data-fr, data-en et le texte -->
+      <h1 class="proj-title" data-fr="Collectif Prism - Opération Diffraction" data-en="Collectif Prism - Opération Diffraction">
+        Collectif Prism <br>- Opération Diffraction
+      </h1>
+
+      <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+          Le collectif Prism, constitué de Niel Armengaud, Albane Heitz et Louise Orione, 
+          <br>s'engage à dévoiler et matérialiser les mécanismes naturalisés du numérique à travers des dispositifs et expériences interactives. 
+          <br>
+          <br>Opération Diffraction est une expérience immersive à la croisée de l'escape game et du théâtre immersif, qui interroge de manière ludique et critique notre rapport aux plateformes numériques.
+          <br>Les participants incarnent de nouveaux employés de PRISM Corporation, leader mondial de la publicité ciblée. Le temps de l'expérience, ils acceptent le contrat de travail sans le lire, exécutent des tâches répétitives sans en comprendre le sens, sont observés sans le savoir. Les mêmes habitudes et mécanismes que sur les plateformes numériques, mais cette fois dans un espace physique, matériel, en temps réel. 
+          <br>Un bug, un son, un indice suffisent à faire naître le doute. C'est aux participants de comprendre, par eux-mêmes, qu'ils ne sont pas seulement employés de PRISM Corp., ils en sont aussi la donnée.
+          <br>
+          <br>Comme une diffraction, ce projet est né de 3 regards, 3 sujets de recherche distincts, qui se croisent et se répondent autour d'un même thème. Le fruit de ces 10 mois de recherche-création est à retrouver dans la collection En-quêtes ci-dessous, réunissant les trois mémoires du collectif.
+
+        </p>
+        <p data-lang-block="en" style="display:none">
+          The Prism collective, made up of Niel Armengaud, Albane Heitz and Louise Orione,
+          <br> is committed to exposing and giving physical form to the naturalized mechanisms of the digital world through interactive devices and experiences.
+          <br>
+          <br>Opération Diffraction is an immersive experience at the crossroads of escape game and immersive theatre, playfully and critically questioning our relationship to digital platforms.
+          <br>Participants take on the role of new employees at PRISM Corporation, world leader in targeted advertising. For the duration of the experience, they sign the employment contract without reading it, carry out repetitive tasks without understanding their purpose, and are watched without knowing it. The same habits and mechanisms found on digital platforms — but this time in a physical, material space, in real time. A glitch, a sound, a clue is all it takes for doubt to creep in. It's up to the participants to realize, on their own, that they are not merely employees of PRISM Corp, they are also its data.
+          <br>
+          <br>Like a diffraction, this project was born from 3 perspectives, 3 distinct research subjects, intersecting and echoing one another around a shared theme. The result of these 10 months of research-creation can be found in the En-quêtes collection below, bringing together the collective's three research papers.
+        </p>
+      </div>
+
+    
+      <!-- Lien externe simple sans vignette -->
+    <div class="proj-links" style="margin-top: 16px;">
+        <a href="https://digital.ecole-estienne.net/D15/memoires_2026.html"
+            target="_blank" rel="noopener" class="proj-ext-link-thumb">
+
+            <!-- Vignette — remplace src par ton image -->
+            <div class="proj-ext-thumb-wrap">
+            <img
+                src="imports/PRISM/EnQuetes02.jpg"
+                alt="Collection En-Quêtes"
+                class="proj-ext-thumb-img"
+                loading="lazy"
+            >
+            </div>
+
+            <!-- Label avec flèche -->
+            <span class="proj-ext-thumb-label">
+            <span data-fr="Collection En-Quêtes" data-en="En-Quêtes collection">Collection En-Quêtes</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+            </svg>
+            </span>
+
+        </a>
+        </div>
+
+    <!-- Description — 2 à 4 lignes max -->
+      <div class="proj-description">
+        <p data-lang-block="fr">
+          Découvrez le projet et ses coulisses en vidéo !
+          <br>L'ensemble des montages ont été réalisé par Louise Orione. 
+        </p>
+
+        <p data-lang-block="en" style="display:none">
+          Discover the project and its behind-the-scenes in video
+          <br>All edits were made and directed by Louise Orione.
+        </p>
+      </div>
+
+      <!-- Liens externes avec vignettes YouTube -->
+    <div class="proj-video-links">
+
+    <a href="https://youtu.be/_4wltJJUFoE" target="_blank" rel="noopener" class="proj-video-link">
+        <div class="proj-video-thumb">
+        <img
+            src="https://img.youtube.com/vi/_4wltJJUFoE/hqdefault.jpg"
+            alt="Vidéo de scénario"
+            class="proj-video-thumb-img"
+            loading="lazy"
+        >
+        <div class="proj-video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="10" fill="rgba(0,0,0,0.55)"/>
+            <path d="M8 6.5L14 10L8 13.5V6.5Z" fill="white"/>
+            </svg>
+        </div>
+        </div>
+        <span class="proj-video-link-label">
+        <span data-fr="Vidéo de scénario" data-en="Scenario video">Vidéo de scénario</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+        </span>
+    </a>
+
+    <a href="https://youtu.be/A4nxLIvNSCc" target="_blank" rel="noopener" class="proj-video-link">
+        <div class="proj-video-thumb">
+        <!-- Vignette automatique YouTube — pas besoin d'uploader une image -->
+        <img
+            src="https://img.youtube.com/vi/1-jNk687LCA/hqdefault.jpg"
+            alt="Teaser vidéo"
+            class="proj-video-thumb-img"
+            loading="lazy"
+        >
+        <!-- Bouton play superposé -->
+        <div class="proj-video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="10" fill="rgba(0,0,0,0.55)"/>
+            <path d="M8 6.5L14 10L8 13.5V6.5Z" fill="white"/>
+            </svg>
+        </div>
+        </div>
+        <span class="proj-video-link-label">
+        <span data-fr="Dénonçons PRISM Corp." data-en="Expose PRISM Corp.">Dénonçons PRISM Corp.</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+        </span>
+    </a>
+    
+    <a href="https://youtu.be/t39t5_VVChk" target="_blank" rel="noopener" class="proj-video-link">
+        <div class="proj-video-thumb">
+        <img
+            src="https://img.youtube.com/vi/t39t5_VVChk/hqdefault.jpg"
+            alt="Vidéo du processus créatif"
+            class="proj-video-thumb-img"
+            loading="lazy"
+        >
+        <div class="proj-video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="10" fill="rgba(0,0,0,0.55)"/>
+            <path d="M8 6.5L14 10L8 13.5V6.5Z" fill="white"/>
+            </svg>
+        </div>
+        </div>
+        <span class="proj-video-link-label">
+        <span data-fr="Vidéo du processus créatif" data-en="Creative process video">Vidéo du processus créatif</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+        </span>
+    </a>
+
+    </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         3. GALERIE — médias du projet
+         Toutes les images/vidéos ont de petites marges latérales.
+         Elles peuvent être seules, par 2 ou par 3 sur la même ligne.
+
+         BLOCS DISPONIBLES — copie/colle selon tes besoins :
+
+           .proj-row                → une image seule (pleine largeur de la colonne)
+           .proj-row.proj-row--duo  → deux médias côte à côte
+           .proj-row.proj-row--trio → trois médias sur la même ligne
+
+         Pour chaque média : remplace src/alt ou utilise un <div class="proj-video-wrap">
+    ══════════════════════════════════════════════════════════════════ -->
+    <section class="proj-gallery">
+
+
+            <!-- ── Vidéo seule (ratio 16:9) ──
+           Option A : fichier local (.mp4)
+           Option B : Vimeo ou YouTube (voir commentaire)
+      ── -->
+        <!-- ── Vidéo YouTube non répertoriée ── -->
+        <div class="proj-row">
+            <figure class="proj-item">
+                <figcaption class="proj-caption"
+                    data-fr="©Teaser - Montage, Motion & Sound Design by Louise Orione & Niel Armengaud"
+                    data-en="©Teaser - Montage, Motion & Sound Design by Louise Orione & Niel Armengaud">
+                    ©Teaser - Montage, Motion & Sound Design by Louise Orione & Niel Armengaud
+                </figcaption>
+                <div class="proj-video-wrap">
+                <iframe
+                    src="https://drive.google.com/file/d/1XE-43Poj9gfm8HbydGja4OYF76NBHcC5/preview"
+                    class="proj-video"
+                    frameborder="0"
+                    allow="autoplay"
+                    allowfullscreen
+                    title="(W)E-DOC — extrait vidéo"
+                ></iframe>
+                </div>
+            </figure>
+            </div>
+
+      <!-- ── Trois images sur la même ligne ── -->
+      <div class="proj-row proj-row--trio">
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/OpDiff01.jpg" alt="Variation 1" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Unité de tri - ©Collectif Prism - photo by Louise Orione"
+            data-en="Working room - ©Collectif Prism - photo by Louise Orione">
+            Unité de tri - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/OpDiff02.jpg" alt="Variation 2" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Unité de tri - ©Collectif Prism - photo by Louise Orione"
+            data-en="Working room - ©Collectif Prism - photo by Louise Orione">
+            Unité de tri - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/OpDiff03.jpg" alt="Variation 3" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Unité de tri - ©Collectif Prism - photo by Louise Orione"
+            data-en="Working room - ©Collectif Prism - photo by Louise Orione">
+            Unité de tri - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <!-- ── Image seule ── -->
+      <div class="proj-row">
+        <figure class="proj-item">
+          <img src="imports/PRISM/BackEnd01.jpg" alt="Vue 1" class="proj-img" loading="lazy">
+          <!-- Légende optionnelle — supprime le figcaption si inutile -->
+          <figcaption class="proj-caption"
+            data-fr="Back-end, interfaces des hackeurs - ©Collectif Prism - photo by Louise Orione"
+            data-en="Back-end, hacking interfaces - ©Collectif Prism - photo by Louise Orione">
+            Back-end, interfaces des hackeurs - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+      </div>
+
+    <!-- ── Deux images côte à côte ── -->
+      <div class="proj-row proj-row--duo">
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/BackEnd03.jpg" alt="Vue 5" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Back-end, interfaces des hackeurs - ©Collectif Prism - photo by Louise Orione"
+            data-en="Back-end, hacking interfaces - ©Collectif Prism - photo by Louise Orione">
+            Back-end, interfaces des hackeurs - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Cam01.jpg" alt="Vue 6" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Back-end, caméra de surveillance - ©Collectif Prism - photo by Louise Orione"
+            data-en="Back-end, surveillance camera - ©Collectif Prism - photo by Louise Orione">
+            Back-end, caméra de surveillance - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+      </div>
+
+
+      <!-- ── Trois images sur la même ligne ── -->
+      <div class="proj-row proj-row--trio">
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Sceno01.jpg" alt="Variation 1" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Cartons de l'unité de tri - ©Collectif Prism - photo by Louise Orione"
+            data-en="Cardboard boxes in the working room - ©Collectif Prism - photo by Louise Orione">
+            Cartons de l'unité de tri - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/OpDiff06.jpg" alt="Variation 2" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Station de travail et fragments de tissus encodés - ©Collectif Prism - photo by Louise Orione"
+            data-en="Working station and encoded fabric fragments - ©Collectif Prism - photo by Louise Orione">
+            Station de travail et fragments de tissus encodés - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/OpDiff04.jpg" alt="Variation 3" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Téléphone de fonction, badges et tablette de commandes - ©Collectif Prism - photo by Louise Orione"
+            data-en="Working phone, badges and Order control Ipad - ©Collectif Prism - photo by Louise Orione">
+            Téléphone de fonction, badges et tablette de commandes - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <!-- ── Deux images côte à côte ── -->
+      <div class="proj-row proj-row--duo">
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Veste04.jpg" alt="Vue 5" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Veste de travail, cousue par Albane Heitz - ©Collectif Prism - photo by Louise Orione"
+            data-en="Work jacket sewn by Albane Heitz - ©Collectif Prism - photo by Louise Orione">
+            Veste de travail, cousue par Albane Heitz - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Veste01.jpg" alt="Vue 6" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Veste de travail, cousue par Albane Heitz - ©Collectif Prism - photo by Louise Orione"
+            data-en="Work jacket sewn by Albane Heitz - ©Collectif Prism - photo by Louise Orione">
+            Veste de travail, cousue par Albane Heitz - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+      </div>
+
+            <!-- ── Deux images côte à côte ── -->
+      <div class="proj-row proj-row--duo">
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Veste02.jpg" alt="Variation 2" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Veste de travail, cousue par Albane Heitz - ©Collectif Prism - photo by Louise Orione"
+            data-en="Work jacket sewn by Albane Heitz - ©Collectif Prism - photo by Louise Orione">
+            Veste de travail, cousue par Albane Heitz - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Veste03.jpg" alt="Variation 3" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Schéma technique du model de la veste de travail - ©Collectif Prism - photo by Louise Orione"
+            data-en="Technical drawing of the work jacket model - ©Collectif Prism - photo by Louise Orione">
+            Schéma technique du model de la veste de travail - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+      </div>
+
+<!-- ── Image seule ── -->
+      <div class="proj-row">
+        <figure class="proj-item">
+          <img src="imports/PRISM/Musee03.jpg" alt="Vue 4" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Musée de l'expérience - ©Collectif Prism - photo by Louise Orione"
+            data-en="Museum of the experience - ©Collectif Prism - photo by Louise Orione">
+            Musée de l'expérience - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+      </div>
+
+<!-- ── Deux images côte à côte ── -->
+      <div class="proj-row proj-row--duo">
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Musee01.jpg" alt="Vue 5" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Interface de tramage pour encoder les fragments de tissus - Musée de l'expérience - ©Collectif Prism - photo by Louise Orione"
+            data-en="Dithering interface for encoding fabric fragments – Museum of Experience - ©Collectif Prism - photo by Louise Orione">
+            Interface de tramage pour encoder les fragments de tissus - Musée de l'expérience - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+        <figure class="proj-item">
+          <img src="imports/PRISM/Musee02.jpg" alt="Vue 6" class="proj-img" loading="lazy">
+          <figcaption class="proj-caption"
+            data-fr="Echantillons des typons pour les fragments de tissus encodés - ©Collectif Prism - photo by Louise Orione"
+            data-en="Samples of halftone films for the encoded fabric fragments - ©Collectif Prism - photo by Louise Orione">
+            Echantillons des typons pour les fragments de tissus encodés - ©Collectif Prism - photo by Louise Orione
+          </figcaption>
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         4. NAVIGATION — projet précédent / timeline / projet suivant
+         Modifie les href, noms et années.
+    ══════════════════════════════════════════════════════════════════ -->
+    <nav class="proj-nav" aria-label="Navigation entre projets">
+
+      <!-- Projet précédent — modifie href, nom, année -->
+      <a href="math.html" class="proj-nav-link proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="← Précédent" data-en="← Previous">← Précédent</span>
+        <span class="proj-nav-name">Math is music</span>
+        <span class="proj-nav-year">2024</span>
+      </a>
+
+      <!-- Retour à la timeline -->
+      <a href="index.html" class="proj-nav-home" aria-label="Retour à la timeline">
+        <svg class="proj-nav-sun" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+          <line x1="12" y1="2"  x2="12" y2="5"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="2"  y1="12" x2="5"  y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="4.93"  y1="4.93"  x2="7.05"  y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="16.95" y1="16.95" x2="19.07" y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="19.07" y1="4.93"  x2="16.95" y2="7.05"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="7.05"  y1="16.95" x2="4.93"  y2="19.07" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <!-- Projet suivant — modifie href, nom, année -->
+      <a href="wedoc.html" class="proj-nav-link proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant →" data-en="Next →">Suivant →</span>
+        <span class="proj-nav-name">(W)e-doc: un processus documentaire pluriel</span>
+        <span class="proj-nav-year">2026</span>
+      </a>
+
+    </nav>
+
+
+  </main>
+
+
+  <!-- Contacts en bas à gauche — identique sur toutes les pages -->
+  <footer class="home-footer">
+    <div class="home-footer-contacts">
+      <a href="mailto:louiseorione.pro@gmail.com" class="home-footer-link">
+        louiseorione.pro@gmail.com
+      </a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.instagram.com/l_0rizon" target="_blank" rel="noopener"
+        class="home-footer-link">Instagram</a>
+      <span class="home-footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/louise-orione/" target="_blank" rel="noopener"
+        class="home-footer-link">LinkedIn</a>
+    </div>
+    <div class="home-footer-right">
+      <span class="home-footer-copy">©2026 Louise Orione</span>
+      <span class="home-footer-sep">·</span>
+      <a href="privacy.html" class="home-footer-link"
+        data-fr="Politique de confidentialité"
+        data-en="Privacy policy">
+        Politique de confidentialité
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="javascripts/projects-data.js"></script>
+  <script src="javascripts/ui.js"></script>
+  <script>
+    setActiveNav('');
+  </script>
+
+</body>
+</html>
