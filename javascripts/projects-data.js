@@ -50,7 +50,7 @@ const PROJECTS = [
     type: ['installation'],
     title:    { fr: 'Retro rêveur', en: 'Dreamer projector' },
     year:     2025, month: 10,
-    image:    'imports/RETROREV/retroreveur01.jpg',
+    image:    '"C:imports/RETROREV/retroreveur01.jpg"',
     href:     'retroreveur.html',
     featured: true,
     w: 460, h: 290, y: 200, z: 2,

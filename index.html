@@ -294,6 +294,21 @@
   <script src="javascripts/projects-data.js"></script>
   <script src="javascripts/ui.js"></script>
 
+  <!-- Cache le logo quand on scrolle vers le bas -->
+  <script>
+    (function() {
+      var logo = document.querySelector('.logo');
+      if (!logo) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 60) {
+          logo.classList.add('is-hidden');
+        } else {
+          logo.classList.remove('is-hidden');
+        }
+      }, { passive: true });
+    })();
+  </script>
+
   <script>
     /* ══════════════════════════════════════════════════════
        GÉNÉRATION DES CARTES DU CAROUSEL
@@ -426,6 +441,20 @@
 
 
     setActiveNav('index.html');
+
+    /* ── Cache le logo au scroll ── */
+    (function() {
+      const logo = document.querySelector('.logo');
+      if (!logo) return;
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 80) {
+          logo.classList.add('is-hidden');
+        } else {
+          logo.classList.remove('is-hidden');
+        }
+      }, { passive: true });
+    })();
   </script>
 
 </body>
